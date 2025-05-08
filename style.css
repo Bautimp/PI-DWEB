@@ -37,9 +37,30 @@
 html{
     background-color: var(--colorfondo1);
 }
+
+nav , .navbar , .navbar-brand{
+    background-color: var(--colorfondo1);
+    font-family: var(--fuente);
+    color: var(--colorfuente2);
+    nav.item , .nav-link{
+        color: var(--colorfuente1);
+    }
+    
+}
+
+.carousel{
+    background-color: var(--colorfondo1);
+    font-family: var(--fuente);
+    color: var(--colorfuente2);
+}
+.carousel-inner img {
+    height: 80vh; /* Altura del 50% de la ventana */
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+}
+/*
 h1{
     font-family: var(--fuente);
     color: var(--colorfuente2);
     background-color: var(--colorfondo1);
 }
-
+*/
