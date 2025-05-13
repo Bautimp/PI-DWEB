@@ -1,13 +1,3 @@
-@media (max-width: 600px) {
-  .slide-content {
-    margin: 0 5px;
-  }
-  .card {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +29,7 @@ body {
     min-height: 300px;     /* Tamaño mínimo */
     max-height: 500px;     /* Tamaño máximo */
     border-radius: 75px;
-    background: url("/images/fondo_card\ \(2\).png");
+    background: url("/Proyecto integrador/images/fondo_card\ \(2\).png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -113,9 +103,9 @@ body {
 .button {
     border: none;
     font-size: 16px;
-    color: rgb(223, 113, 23);
+    color: black;
     padding: 8px 16px;
-    background-color: rgb(2, 2, 2);
+    background-color: orangered;
     border-radius: 35px;
     margin: 14px;
     cursor: pointer;
@@ -124,6 +114,6 @@ body {
 }
 .button:hover {
     border-radius: 20px;
-    color: orange;
+    color: orangered;
     background: rgb(37, 37, 37);
 }
