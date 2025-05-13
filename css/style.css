@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    background-color: gray;
+}
+
+.slide-content {
+    margin: 0 40px;
+}
+
+.card {
+    max-height: 600px;
+    max-width: 250px;
+    border-radius: 75px;
+    background-color: white;
+    border-color: orangered;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-radius: 35px;
+    border-color: orange;
+}
+
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 75px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(185, 50, 1);
+    transition: all 0.3s ease;
+}
+
+
+.card:hover .overlay{
+    border-radius: 35px;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid orangered;
+    transition: all 0.1s ease;
+}
+
+.card:hover .card-image .card-img {
+    border: 3px solid orange;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(20, 20, 20);
+}
+
+.description {
+    font-size: 14px;
+    color: rgb(53, 53, 53);
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: rgb(223, 113, 23);
+    padding: 8px 16px;
+    background-color: rgb(2, 2, 2);
+    border-radius: 35px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    border-radius: 20px;
+    color: orange;
+    background: rgb(37, 37, 37);
+}
