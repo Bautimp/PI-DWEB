@@ -1,102 +1,117 @@
-/* Variables */
-:root{
-
-}
-
-*{
-    box-sizing: border-box;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica;
 }
 
-/* Responsive */
-[class*="col-"] {
-    float: left;
-    padding: 10px;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
-
-div.carousel-nav-icon > svg {
-    height: 48px;
-    width: 48px;
+body {
+    
+    background-color: white;
 }
 
-html[data-bs-theme="dark"] div.carousel-nav-icon > svg {
-    fill: #FFF !important;
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    background-color: gray;
 }
 
-/* Siempre mostrar solo un elemento en el carousel */
-.carousel-inner .carousel-item {
-    display: none;
-}
-.carousel-inner .carousel-item.active {
-    display: block;
+.slide-content {
+    margin: 0 40px;
 }
 
-/* Ajustes para evitar espacio en blanco en carousel */
-#recipeCarousel .carousel-inner,
-#recipeCarousel .carousel-item,
-#recipeCarousel .card,
-#recipeCarousel .card-img,
-#recipeCarousel .card-img img {
-    width: 100% !important;
-    max-width: 100% !important;
+.card {
+    min-width: 200px;      /* Tamaño mínimo */
+    max-width: 250px;      /* Tamaño máximo */
+    min-height: 300px;     /* Tamaño mínimo */
+    max-height: 500px;     /* Tamaño máximo */
+    border-radius: 75px;
+    background: url("/Proyecto integrador/images/fondo_card\ \(2\).png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color:white;
+    border-color: orange;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-#recipeCarousel .col-md-12 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.card:hover {
+    border-radius: 35px;
+    border-color: orange;
 }
 
-@media (min-width: 768px) {
-    /* Elimina el padding lateral de la columna central del carousel */
-    .col-10 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex:1;
 }
 
-/* Centrar el carousel horizontalmente */
-.carousel-center {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    float: none !important;
-    display: block !important;
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
 }
 
-.carousel-arrow {
+.card:hover .overlay{
+    border-radius: 35px;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+}
+
+.card-image .card-img {
     height: 100%;
-    min-width: 48px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding: 0 !important;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid orangered;
+    transition: all 0.1s ease;
 }
 
-.carousel-arrow .carousel-nav-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card:hover .card-image .card-img {
+    border: 3px solid orange;
 }
 
-.carousel-arrow {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color:white
 }
-.carousel-arrow.me-3 {
-    margin-right: 24px !important;
+
+.description {
+    font-size: 14px;
+    color: white;
+    text-align: center;
 }
-.carousel-arrow.ms-3 {
-    margin-left: 24px !important;
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: black;
+    padding: 8px 16px;
+    background-color: orangered;
+    border-radius: 35px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+.button:hover {
+    border-radius: 20px;
+    color: orangered;
+    background: rgb(37, 37, 37);
 }
