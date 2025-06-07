@@ -32,10 +32,10 @@ body {
 }
 
 .card {
-    min-width: 200px;      /* Tamaño mínimo */
-    max-width: 250px;      /* Tamaño máximo */
-    min-height: 300px;     /* Tamaño mínimo */
-    max-height: 500px;     /* Tamaño máximo */
+    min-width: 200px;      
+    max-width: 250px;      
+    min-height: 300px;     
+    max-height: 500px;     
     border-radius: 75px;
     background: url("/Proyecto integrador/images/fondo_card\ \(2\).png");
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ body {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-}
+} 
 
 .card:hover {
     border-radius: 35px;
