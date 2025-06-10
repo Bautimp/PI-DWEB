@@ -30,3 +30,27 @@ input, label{
     padding-right: 5px;
     cursor: none;
 }
+
+.dayContainer, .flatpickr-rContainer, .flatpickr-weekdaycontainer, .flatpickr-months, .flatpickr-current-month, .arrowUp, .arrowDown{
+    background-color: white;
+    
+    .numInputWrapper{
+        background-color: white;
+        color: black;
+    }
+    .flatpickr-next-month, .flatpickr-prev-month{
+        background-color: white;
+        path, svg{
+            background-color: white;
+        }
+    }
+    span.flatpickr-disabled{
+        color: black;
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+    .flatpickr-monthDropdown-months option{
+        color: var(--colorBlanco);
+        background-color: var(--fondoNegro) !important;
+    }
+    
+}
