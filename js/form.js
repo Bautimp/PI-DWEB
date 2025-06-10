@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () { /* Esto para que aplique apenas el DOM este cargado */
-
     /* Ocultar mensajes de error */
     let errores = document.querySelectorAll(".error");
     for (let e = 0; e < errores.length; e++) {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () { /* Esto para que apl
         console.log("No se encontró imagen activa");
     }
     });
-
 });
 
 function validar () {
@@ -37,6 +35,7 @@ function validar () {
     let email = document.getElementById("email").value.trim();
     let serviceSeleccionado = document.getElementById("opcionSeleccionada").value;
     let tel = document.getElementById("tel").value.trim();
+    let fecha = document.getElementById("fechaService").value;
     
     if (nombre.length < 2) {
         error = document.querySelector(".error.nombre"); /* agarra el button con el error */
@@ -87,10 +86,53 @@ function validar () {
         ocultarElemento(error); /* lo pasa por parametro al button */
     }
 
-    if (cantErrores > 0) {
-        return false;
-    } else {
+    if (cantErrores == 0) {
+        guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado);
         return true;
+    }
+    return false;
+}
+
+async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, service) {
+    const formData = {
+        "nombre": nombre,
+        "apellido": apellido,
+        "email": email,
+        "telefono": telefono,
+        "service": service,
+        "fecha": fecha
+    };
+
+    try {
+        // Cargar datos existentes
+        const response = await fetch('events.json');
+        let eventos = await response.json();
+
+        // Combinar con localStorage si existe
+        const savedData = localStorage.getItem('calendarEvents');
+        
+        if (savedData) {
+            eventos = {...eventos, ...JSON.parse(savedData)};
+        }
+
+        // Agregar nuevo turno
+        if (!eventos[formData.fecha]) {
+            eventos[formData.fecha] = [];
+        }
+
+        eventos[formData.fecha].push({
+            title: `Turno ${eventos[formData.fecha].length + 1}`,
+            cliente: `${formData.nombre} ${formData.apellido}`,
+            telefono: formData.telefono,
+            email: formData.email,
+            service: formData.service
+        });
+
+        // Guardar en localStorage
+        localStorage.setItem('calendarEvents', JSON.stringify(eventos));
+
+    } catch (error) {
+        console.error("Error al guardar datos:", error);
     }
 }
 
@@ -115,3 +157,8 @@ function esTelefonoValido(telefono) { /* Función para validar un número de tel
 function limpiarInput (id) {
     document.getElementById(id).value = "";
 }
+
+
+
+
+

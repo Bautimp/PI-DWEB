@@ -1,19 +1,30 @@
 
 document.addEventListener("DOMContentLoaded", async function() {
-    // Cargar fechas bloqueadas
     const { fechasBloqueadas } = await cargarFechasBloqueadas();
 
-    // Configurar Flatpickr
     flatpickr("#fechaService", {
         locale: "es",
         minDate: "today",
         disable: [
             function(date) {
-                // Bloquear domingos (día 0)
                 return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date));
             }
         ],
-        dateFormat: "Y-m-d"
+        dateFormat: "Y-m-d",
+        onReady: function() {
+            // Aplicar estilos personalizados
+            document.querySelectorAll('.flatpickr-month, .flatpickr-weekday, .flatpickr-day')
+                .forEach(el => el.style.color = 'white');
+
+            // Días deshabilitados en rojo
+            document.querySelectorAll('.flatpickr-day.disabled')
+                .forEach(el => el.style.color = 'red');
+        },
+        onChange: function() {
+            // Reaplicar estilos cuando cambia el mes
+            document.querySelectorAll('.flatpickr-day.disabled')
+                .forEach(el => el.style.color = 'red');
+        }
     });
 });
 
