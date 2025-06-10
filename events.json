@@ -3,63 +3,39 @@
     {
       "title": "Turno 1",
       "cliente": "Juan Carlos Rodriguez",
-      "telefono": "1234567890"
+      "telefono": "1234567890",
+      "email": "asdasd@asda.com",
+      "service": "opcion1"
     },
     {
       "title": "Turno 2",
-      "cliente": "Maria Lopez",
-      "telefono": "0987654321"
-    },
-    {
-      "title": "Turno 3",
-      "cliente": "Pedro Martinez",
-      "telefono": "1122334455"
+      "cliente": "Juan Carlos Rodriguez",
+      "telefono": "1234567890",
+      "email": "asdasd@asda.com",
+      "service": "opcion1"
     }
   ],
-  "2025-06-15": [
+  "2025-06-16": [
     {
       "title": "Turno 1",
       "cliente": "Juan Carlos Rodriguez",
-      "telefono": "1234567890"
+      "telefono": "1234567890",
+      "email": "asdasd@asda.com",
+      "service": "opcion1"
     },
     {
       "title": "Turno 2",
-      "cliente": "Maria Lopez",
-      "telefono": "0987654321"
+      "cliente": "Juan Carlos Rodriguez",
+      "telefono": "1234567890",
+      "email": "asdasd@asda.com",
+      "service": "opcion1"
     },
     {
       "title": "Turno 3",
-      "cliente": "Pedro Martinez",
-      "telefono": "1122334455"
-    }
-  ],
-  "2025-06-20": [
-    {
-      "title": "Turno 1",
       "cliente": "Juan Carlos Rodriguez",
-      "telefono": "1234567890"
-    },
-    {
-      "title": "Turno 2",
-      "cliente": "Maria Lopez",
-      "telefono": "0987654321"
-    }
-  ],
-  "2025-07-05": [
-    {
-      "title": "Turno 1",
-      "cliente": "Juan Carlos Rodriguez",
-      "telefono": "1234567890"
-    },
-    {
-      "title": "Turno 2",
-      "cliente": "Maria Lopez",
-      "telefono": "0987654321"
-    },
-    {
-      "title": "Turno 3",
-      "cliente": "Pedro Martinez",
-      "telefono": "1122334455"
+      "telefono": "1234567890",
+      "email": "asdasd@asda.com",
+      "service": "opcion1"
     }
   ]
 }

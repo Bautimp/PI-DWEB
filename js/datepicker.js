@@ -11,20 +11,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
         ],
         dateFormat: "Y-m-d",
-        onReady: function() {
-            // Aplicar estilos personalizados
-            document.querySelectorAll('.flatpickr-month, .flatpickr-weekday, .flatpickr-day')
-                .forEach(el => el.style.color = 'white');
-
-            // Días deshabilitados en rojo
-            document.querySelectorAll('.flatpickr-day.disabled')
-                .forEach(el => el.style.color = 'red');
-        },
-        onChange: function() {
-            // Reaplicar estilos cuando cambia el mes
-            document.querySelectorAll('.flatpickr-day.disabled')
-                .forEach(el => el.style.color = 'red');
-        }
     });
 });
 
@@ -40,7 +26,6 @@ async function cargarFechasBloqueadas() {
         // Procesar fechas bloqueadas (3+ eventos)
         const fechasBloqueadas = Object.keys(eventos)
             .filter(fecha => eventos[fecha].length >= 3);
-
         return { fechasBloqueadas };
     } catch (error) {
         console.error("Error:", error);

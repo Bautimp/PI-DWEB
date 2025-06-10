@@ -109,12 +109,14 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         let eventos = await response.json();
 
         // Combinar con localStorage si existe
+        /*
         const savedData = localStorage.getItem('calendarEvents');
         
         if (savedData) {
             eventos = {...eventos, ...JSON.parse(savedData)};
         }
-
+        */
+        
         // Agregar nuevo turno
         if (!eventos[formData.fecha]) {
             eventos[formData.fecha] = [];
@@ -129,7 +131,9 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         });
 
         // Guardar en localStorage
-        localStorage.setItem('calendarEvents', JSON.stringify(eventos));
+        //localStorage.setItem('calendarEvents', JSON.stringify(eventos));
+        // Guardar en el archivo JSON
+        
 
     } catch (error) {
         console.error("Error al guardar datos:", error);
