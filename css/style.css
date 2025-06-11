@@ -42,7 +42,23 @@ body {
     text-align: center;
 }
 
-/* ESTILO IMAGENES CAROUSEL SERVICE */
+#tituloService {
+    color: var(--colorNaranja);
+}
+
+/* ESTILO CAROUSEL SERVICE */
+.contenedor-items-services {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contenedor-texto-services {
+    max-width: 800px;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+
 .imgServices {
     border-radius: 15px;
 }
