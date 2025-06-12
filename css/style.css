@@ -44,6 +44,7 @@ body {
 
 #tituloService {
     color: var(--colorNaranja);
+    font-weight: bold;
 }
 
 /* ESTILO CAROUSEL SERVICE */
@@ -53,11 +54,11 @@ body {
 }
 
 .contenedor-texto-services {
+    line-height: 1.5;
     max-width: 800px;
     margin: 20px auto; 
     text-align: center;
 }
-
 
 .imgServices {
     border-radius: 15px;
@@ -77,4 +78,5 @@ body {
 .iconTrans {
     background-color: rgba(0, 0, 0, 0); /* Fondo transparente iconos de carousel*/
 }
-    
+
+/*ESTILO PARTE DIGITAL */
