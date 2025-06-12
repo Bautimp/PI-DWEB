@@ -83,13 +83,14 @@ body {
 
 /*ESTILO PARTE DIGITAL */
 
-.contenenedor-texto-parte {
-    
+.contenenedor-texto-parte{
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 #tituloParte {
-    margin-right: 200px;
-    margin-top: 200px;
     margin-bottom: 30px;
     color: var(--colorNaranja);
     font-weight: bold;
@@ -97,7 +98,6 @@ body {
 }
 
 #textoParte {
-    margin-right: 200px;
     font-size: var(--fuenteTam);
     text-align: center;
 
@@ -105,6 +105,7 @@ body {
 #botonParte {  
     justify-content:flex-end;
     display: flex;
+    margin: auto;
 }
 #btnSeleccionar {
     width:200px;
@@ -112,9 +113,9 @@ body {
     color: var(--colorBlanco);
     font-weight: bold;
     border-radius: 10px;
-    border: none;   
-    padding: 10px 20px;
+    border: none;
     transition: background-color 0.3s ease;
+    margin: auto;
 }
 
 #btnSeleccionar:hover {
@@ -122,11 +123,13 @@ body {
 }
 
 .contenedor-imagen-parte {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #imgParte {
-    place-items: center;
+
     max-width: 100%;
     height: auto;
 }
