@@ -89,31 +89,32 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
               </div>
-              <div id="carouselServices" class="carousel-inner card card:hover">
+              <div id="carouselServices" class="carousel-inner card card:hover" ontransitionend="mostrarInfo()">
                 <!-- ENLACE A LA PAGINA DE FORMULARIO -->
                 <!-- <a href="Services.html"> -->
-                  <div id="img1" data-value="1" class="carousel-item active card:hover">
+                  <div id="img1" class="carousel-item active card:hover">
                     <img  src="images/Cards/1.png" class="d-block w-100 imgServices card card:hover" alt="service1">
                   </div>
-                  <div id="img2" data-value="2" class="carousel-item">
+                  <div id="img2" class="carousel-item">
                     <img src="images/Cards/2.png" class="d-block w-100 imgServices card card:hover" alt="service2">
                   </div>
-                  <div id="img3" data-value="3" class="carousel-item">
+                  <div id="img3" class="carousel-item">
                     <img src="images/Cards/3.png" class="d-block w-100 imgServices card card:hover" alt="service3">
                   </div>
-                  <div id="img4" data-value="4" class="carousel-item">
+                  <div id="img4" class="carousel-item">
                     <img  src="images/Cards/4.png" class="d-block w-100 imgServices card card:hover" alt="service4">
                   </div>
-                  <div id="img5" data-value="5" class="carousel-item">
+                  <div id="img5" class="carousel-item">
                     <img  src="images/Cards/5.png" class="d-block w-100 imgServices card card:hover" alt="service5">
                   </div>
-                <!-- </a> -->
+                <!-- </a> onclick="mostrarInfo()" -->
+
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="mostrarInfo()">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon iconTrans" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="mostrarInfo()">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon iconTrans" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>

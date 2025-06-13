@@ -16,22 +16,29 @@ const cargarArchivo = () => {
 
 function mostrarInfo() {
     let descripcionService=document.getElementById('descripcionService');
-    let serviceSeleccionado=document.getElementById('carouselServices');
     let arregloImagenes = [document.getElementById("img1"), document.getElementById("img2"), document.getElementById("img3"), document.getElementById("img4"), document.getElementById("img5")];
 
+    descripcionService.innerHTML="";
     for (let i=0; i < arregloImagenes.length; i++) {
-        console.log(arregloImagenes[i].className);
+        
         if((arregloImagenes[i].className).includes("active")) {
-            
-            console.log(arregloImagenes[i].value);
-
-            switch(arregloImagenes[i].value){
-                case 1:
-                    descripcionService.innerHTML="Este es el service de rutina";
+            switch(arregloImagenes[i].id){
+                case "img1":
+                    descripcionService.innerHTML="Este es el service 1";
                     break;
-                case 2:
-                    descripcionService.innerHTML="Este el service de estandar";
+                case "img2":
+                    descripcionService.innerHTML="Este es el service de 2";
+                    break;
+                case "img3":
+                    descripcionService.innerHTML="Este es el service de 3";
+                    break;
+                case "img4":
+                    descripcionService.innerHTML="Este es el service de 4";
+                    break;
+                case "img5":
+                    descripcionService.innerHTML="Este es el service de 5";
             }
+            
         }
     }
     /*
