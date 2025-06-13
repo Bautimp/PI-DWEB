@@ -49,9 +49,12 @@ body {
 }
 
 /* ESTILO CAROUSEL SERVICE */
-.contenedor-items-services {
-    max-width: 300px;
-    margin: 0 auto;
+.contenedor-items-services{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+
 }
 
 .contenedor-texto-services {
@@ -82,12 +85,8 @@ body {
 }
 
 /*ESTILO PARTE DIGITAL */
-
-.contenenedor-texto-parte{
-    line-height: 1.5;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
+.contenedor-texto-parte {
+    padding: 25px;
 }
 
 #tituloParte {
@@ -129,7 +128,9 @@ body {
 }
 
 #imgParte {
-
     max-width: 100%;
     height: auto;
+}
+.tituloSection{
+    font-size: 35px;
 }
