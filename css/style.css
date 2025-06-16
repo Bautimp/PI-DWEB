@@ -2,141 +2,204 @@
     --colorNaranja: #ff7a00;
     --fondoNegro: #1f2023;
     --colorBlanco: white;
-    --fuente: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fuente: open-sans, sans-serif, Arial, Helvetica, sans-serif;
+    --fuenteTam: 20px;
 }
 
 
+/* ESTILO GLOBAL */
 * {
-
+    color: var(--colorBlanco);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fuente);
     background-color: var(--fondoNegro);
+
 }
 
-.navbar { /* Prueba para que la navbar se quede fijada en la parte superior aunque se desilice para abajo en la página */
-    position: fixed;
-    top: 0;
+
+/* ESTILO NAVBAR  */
+
+header{
+    background-color: var(--fondoNegro);
+    /* position: fixed; */
     width: 100%;
-    padding: 15px;
+    z-index: 1001;
+    padding: 1px;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+.navbar #logo{
+    position: absolute;
+    margin: auto;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    display: flex;
     z-index: 1000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff7a00; /*Cambia el color del texto al pasar el mouse*/
+}
+
+.navOp {
+    margin-right: 10px;
+}
+
+#btnTurnos {
+    width: 90px;
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    padding: 3px;
+}
+
+#btnTurnos:hover {
+    background-color: #ff7b0094; /* Cambia el color al pasar el mouse */
 }
 
 
+/* ESTILO CUERPO */
 body {
     overflow-x: hidden;
     background-color: white;
 }
 
-.slide-container {
-    max-width: 1120px;
-    width: 100%;
-    background-color: gray;
-}
-
-.slide-content {
-    margin: 0 40px;
-}
-
-.card {
-    min-width: 200px;      
-    max-width: 250px;      
-    min-height: 300px;     
-    max-height: 500px;     
-    border-radius: 75px;
-    background: url("/Proyecto integrador/images/fondo_card\ \(2\).png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    color:white;
-    border-color: orange;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-} 
-
-.card:hover {
-    border-radius: 35px;
-    border-color: orange;
-}
-
-.image-content, .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30%;
-    padding-bottom: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    flex:1;
-}
-
-.image-content {
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-}
-
-.card:hover .overlay{
-    border-radius: 35px;
-}
-
-.card-image {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: white;
-    padding: 3px;
-}
-
-.card-image .card-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid orangered;
-    transition: all 0.1s ease;
-}
-
-.card:hover .card-image .card-img {
-    border: 3px solid orange;
-}
-
-.name {
-    font-size: 18px;
-    font-weight: 500;
-    color:white
-}
-
-.description {
-    font-size: 14px;
-    color: white;
-    text-align: center;
-}
-
-.button {
-    border: none;
-    font-size: 16px;
-    color: black;
-    padding: 8px 16px;
-    background-color: orangered;
-    border-radius: 35px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: auto;
-}
-.button:hover {
-    border-radius: 20px;
-    color: orangered;
-    background: rgb(37, 37, 37);
-}
-
-#infoService{
+#infoPresentacion {
     background-color: var(--fondoNegro);
     font-family:var(--fuente);
     color: var(--colorBlanco);
     text-align: center;
+}
+
+#tituloService {
+    color: var(--colorNaranja);
+    font-weight: bold;
+}
+
+#tituloNosotros {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: var(--colorNaranja);
+    font-weight: bold;
+    text-align: center;
+}
+
+#textoNosotros {
+    font-size: var(--fuenteTam);
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/* ESTILO CAROUSEL SERVICE */
+.contenedor-items-services{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+#SectionPartners{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#ubicacion{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.contenedor-texto-services {
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: var(--fuenteTam);
+}
+
+.imgServices {
+    border-radius: 15px;
+}
+
+.card {
+    box-shadow: 0 0 45px rgba(97, 58, 21, 0.7); /* Resplandor */
+    transition: box-shadow 0.3s ease; /* Suaviza el cambio */
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card:hover {
+    box-shadow: 0 0 55px rgba(255, 147, 46, 0.308); /* Aumenta el resplandor al pasar el mouse */
+}
+
+.iconTrans {
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente iconos de carousel*/
+}
+
+
+/*ESTILO PARTE DIGITAL */
+.contenedor-texto-parte {
+    padding: 25px;
+}
+
+.tituloParteSection {
+    margin-bottom: 30px;
+    color: var(--colorNaranja);
+    font-weight: bold;
+    text-align: center;
+}
+
+.textoParteSection {
+    font-size: var(--fuenteTam);
+    text-align: center;
+
+}
+
+.botonSection{
+    justify-content:center;
+    display: flex;
+    margin: auto;
+}
+
+.btnSeleccionarSection {
+    width:200px;
+    background-color: var(--colorNaranja) !important;
+    color: var(--colorBlanco);
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: auto;
+}
+
+.btnSeleccionarSection:hover {
+    background-color:#ff7b0094 !important;
+}
+
+.contenedor-imagen-parte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgSecciones {
+    max-width: 100%;
+    height: auto;
+}
+.tituloSection{
+    font-size: 35px;
 }
