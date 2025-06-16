@@ -1,3 +1,7 @@
+* {
+    color: white;
+}
+
 .carousel {
     max-width: 300px;
     max-height: 500px;
@@ -24,4 +28,18 @@
     padding-left: 7px;
     padding-right: 5px;
     cursor: none;
+}
+
+.formHeader {
+    background-image: url(/images/imagenes-stock/bicicleta-montaña-atardecer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25vh;
+}
+
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: none;
 }
