@@ -1,18 +1,5 @@
 
-
-const cargarArchivo = () => {
-    let fechas = [];
-    fetch('datos.json')
-        .then(res => res.json())
-        .then(res => {
-                res.forEach(fecha => {
-                    fechas.push(new Date(fecha));
-                });
-            }
-        )
-
-
-}
+mostrarInfo();
 
 function mostrarInfo() {
     let descripcionService=document.getElementById('descripcionService');
@@ -96,7 +83,7 @@ function mostrarInfo() {
                     descripcionService.innerHTML = `
                         <h2 id="tituloService">PACK-SERVICE FRENOS V1</h2>
                         <p>
-                            Este service para frenos hidráulicos está recomendado para mantener un <b>rendimiento optimo</b> y seguro del sistema de frenado. Sugerimos realizarlo cada <b>3 a 5 meses</b>, dependiendo del tipo de uso y las exigencias del ciclista, ya sea un uso <u>normal</u> o <u>intensivo</u>.<br><br>
+                            Este service para frenos hidráulicos está recomendado para mantener un <b>rendimiento óptimo</b> y seguro del sistema de frenado. Sugerimos realizarlo cada <b>3 a 5 meses</b>, dependiendo del tipo de uso y las exigencias del ciclista, ya sea un uso <u>normal</u> o <u>intensivo</u>.<br><br>
                             <ul style="text-align: left;">
                                 <li>Medición de desgaste de discos de freno</li>
                                 <li>Ajuste y revisión de pastillas de freno</li>
@@ -127,11 +114,4 @@ function mostrarInfo() {
             
         }
     }
-    /*
-
-    console.log(serviceSeleccionado);
-    switch(serviceSeleccionado){
-
-    }
-    */
 }
