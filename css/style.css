@@ -23,27 +23,28 @@
 
 header{
     background-color: var(--fondoNegro);
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     z-index: 1001;
     padding: 1px;
 }
 
+
+
 #logo {
     width: 200px;
     height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
 }
 
-.navbar #logo{
-    position: absolute;
-    margin: auto;
-    top: 75%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    z-index: 1000;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
+.nav-link{
+    font-size: 22px;
 }
+
 
 .navbar-nav .nav-link:hover {
     color: #ff7a00; /*Cambia el color del texto al pasar el mouse*/
@@ -51,6 +52,7 @@ header{
 
 .navOp {
     margin-right: 10px;
+    text-align: center;
 }
 
 #btnTurnos {
