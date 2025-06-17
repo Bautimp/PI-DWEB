@@ -60,10 +60,18 @@ body {
             background-color: white;
         }
     }
-    span.flatpickr-disabled{
+
+
+    span.flatpickr-day{
         color: black;
-        background-color: rgba(255, 0, 0, 0.6);
+        background-color: rgb(134, 237, 118);
     }
+
+    span.flatpickr-disabled{
+        color: #a89f9f;
+        background-color: white;
+    }
+
     .flatpickr-monthDropdown-months option{
         color: var(--colorBlanco);
         background-color: var(--fondoNegro) !important;
