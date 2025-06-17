@@ -1,6 +1,22 @@
-input, label{
-    color: white;
+:root{
+    --colorNaranja: #ff7a00;
+    --fondoNegro: #1f2023;
+    --colorBlanco: white;
+    --fuente: open-sans, sans-serif, Arial, Helvetica, sans-serif;
+    --fuenteTam: 20px;
 }
+
+
+body {
+    color: var(--colorBlanco);
+    background-color: var(--fondoNegro);
+}
+
+.calendario-carousel {
+    color: var(--fondoNegro);
+    background-color: var(--colorBlanco);
+}
+
 
 .carousel {
     max-width: 300px;
