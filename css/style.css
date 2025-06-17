@@ -81,8 +81,8 @@ header{
 }
 
 #btnRegresar {
-    height: 50px;
-    width: 150px;
+    height: 60px;
+    width: 100px;
     background-color: var(--colorNaranja);
     color: var(--colorBlanco);
     font-weight: bold;
@@ -91,6 +91,7 @@ header{
     transition: background-color 0.3s ease;
     margin: auto;
     padding: 3px;
+    font-size: 20px;
 }
 
 #btnRegresar:hover {
