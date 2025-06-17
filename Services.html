@@ -20,8 +20,8 @@
   <header class="fixed-top">
     <div class="row">
       <div class="col-2">
-        <a href="#">
-          <img src="/images/Logo/jmbikes.png" alt="logo" id="logo">
+        <a href="Index.html">
+          <img src="/images/Logo/jmbikes.png" alt="logo" id="logo" style="padding-top: 10px">
         </a>
       </div>
 
@@ -64,68 +64,75 @@
       <div class="row">
         <div class="col-12">
           <form action="mailto:#" id="form1" onsubmit="return validar()">
-            <div class="row">
-              <!-- Parte izquierda -->
-              <div class="mb-3 col-md-6">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
-                  placeholder="Ingrese su Nombre" maxlength="50" required>
-              </div>
-              <!-- Mensaje de error Nombre -->
-              <button type="button" class="error nombre btn btn-outline-danger">
-                <i class="bi bi-exclamation-circle"></i>
-                El nombre debe tener entre 2 y 50 caracteres de largo
-              </button>
-              <!-- Parte derecha -->
-              <div class="mb-3 col-md-6">
-                <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
-                  placeholder="Ingrese su Apellido" maxlength="50" required>
-              </div>
-              <!-- Mensaje de error Apellido -->
-              <button type="button" class="error apellido btn btn-outline-danger">
-                <i class="bi bi-exclamation-circle"></i>
-                El apellido debe tener entre 2 y 50 caracteres de largo
-              </button>
-            </div>
 
-            <div class="row">
-              <!-- Parte izquierda -->
-              <div class="mb-3 col-md-6">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email"
-                  required>
-                <!-- Mensaje de error Correo Electrónico -->
-                <button type="button" class="error email btn btn-outline-danger">
-                  <i class="bi bi-exclamation-circle"></i>
-                  - El email debe tener algo antes del @ <br>
-                  <i class="bi bi-exclamation-circle"></i>
-                  - Contener un dominio válido (algo.com, algo.com.ar) <br>
-                  <i class="bi bi-exclamation-circle"></i>
-                  - No tener espacios
-                </button>
-              </div>
-              <!-- Parte derecha -->
-              <div class="mb-3 col-md-6">
-                <label for="tel" class="form-label">Numero de Teléfono</label>
-                <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingrese su Teléfono" required>
-                <!-- Mensaje de Error Teléfono -->
-                <button type="button" class="error tel btn btn-outline-danger">
-                  <i class="bi bi-exclamation-circle"></i>
-                  Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
-                </button>
-              </div>
-            </div>
             <div class="container mt-4 calendario-carousel">
               <div class="row align-items-start">
                 <!-- Columna Izquierda -->
-                <div class="col-md-6 mb-3">
+                <div class="col-md-7 mb-3">
+                  <div id="inputNombre" class="row">
+                    <div class="mb-3 col-md-12">
+                      <label for="name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="name" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
+                             placeholder="Ingrese su Nombre" maxlength="50" required>
+                    </div>
+                    <!-- Mensaje de error Nombre -->
+                    <button type="button" class="error nombre btn btn-outline-danger">
+                      <i class="bi bi-exclamation-circle"></i>
+                      El nombre debe tener entre 2 y 50 caracteres de largo
+                    </button>
+                  </div>
+                  <div id="inputApellido" class="row">
+                    <div class="mb-3 col-md-12">
+                      <label for="lastName" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="lastName" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
+                             placeholder="Ingrese su Apellido" maxlength="50" required>
+                    </div>
+                    <!-- Mensaje de error Apellido -->
+                    <button type="button" class="error apellido btn btn-outline-danger">
+                      <i class="bi bi-exclamation-circle"></i>
+                      El apellido debe tener entre 2 y 50 caracteres de largo
+                    </button>
+                  </div>
+                  <div id="inputEmail" class="row">
+                    <div class="mb-3 col-md-12">
+                      <label for="email" class="form-label">Correo Electrónico</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email"
+                             required>
+                      <!-- Mensaje de error Correo Electrónico -->
+                      <button type="button" class="error email btn btn-outline-danger">
+                        <i class="bi bi-exclamation-circle"></i>
+                        - El email debe tener algo antes del @ <br>
+                        <i class="bi bi-exclamation-circle"></i>
+                        - Contener un dominio válido (algo.com, algo.com.ar) <br>
+                        <i class="bi bi-exclamation-circle"></i>
+                        - No tener espacios
+                      </button>
+                    </div>
+                    <!-- Parte derecha -->
+
+                  </div>
+                  <div id="inputTelefono" class="row">
+                    <div class="mb-3 col-md-12">
+                      <label for="tel" class="form-label">Numero de Teléfono</label>
+                      <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingrese su Teléfono" required>
+                      <!-- Mensaje de Error Teléfono -->
+                      <button type="button" class="error tel btn btn-outline-danger">
+                        <i class="bi bi-exclamation-circle"></i>
+                        Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
+                      </button>
+                    </div>
+                  </div>
                   <label for="fechaService" class="form-label">Fecha del Service</label>
                   <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha">
+
+                  <div id="seccionBotonServicio" class="row" style="padding-top: 45px;">
+                    <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
+                    <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar Servicio</button>
+                  </div>
                 </div>
 
                 <!-- Columna Derecha -->
-                <div class="col-md-6 text-center">
+                <div class="col-md-5 text-center">
                   <label class="form-label">Seleccioná el service:</label>
                   <div class="mb-4 mx-auto" style="max-width: 300px;">
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
@@ -163,9 +170,6 @@
                       </button>
                     </div>
                   </div>
-
-                  <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
-                  <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar Servicio</button>
                 </div>
               </div>
             </div>
