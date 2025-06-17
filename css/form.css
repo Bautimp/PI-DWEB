@@ -33,7 +33,7 @@ input, label{
 
 .dayContainer, .flatpickr-rContainer, .flatpickr-weekdaycontainer, .flatpickr-months, .flatpickr-current-month, .arrowUp, .arrowDown{
     background-color: white;
-    
+
     .numInputWrapper{
         background-color: white;
         color: black;
@@ -52,17 +52,16 @@ input, label{
         color: var(--colorBlanco);
         background-color: var(--fondoNegro) !important;
     }
-    
+
 }
 
-.formHeader {
+.bandaImg {
     background-image: url(/images/imagenes-stock/bicicleta-montaña-atardecer.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 25vh;
 }
-
 
 h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
