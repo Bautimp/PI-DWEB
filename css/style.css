@@ -29,8 +29,6 @@ header{
     padding: 1px;
 }
 
-
-
 #logo {
     width: 200px;
     height: auto;
@@ -39,6 +37,17 @@ header{
     position: relative;
     z-index: 2000;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar #logo{
+    position: absolute;
+    margin: auto;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
 }
 
 .nav-link{
@@ -68,6 +77,23 @@ header{
 }
 
 #btnTurnos:hover {
+    background-color: #ff7b0094; /* Cambia el color al pasar el mouse */
+}
+
+#btnRegresar {
+    height: 50px;
+    width: 150px;
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    padding: 3px;
+}
+
+#btnRegresar:hover {
     background-color: #ff7b0094; /* Cambia el color al pasar el mouse */
 }
 
