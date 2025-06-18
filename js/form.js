@@ -36,6 +36,7 @@ function validar () {
     let serviceSeleccionado = document.getElementById("opcionSeleccionada").value.trim();
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
+    let adicional  = document.getElementById("anotacion").value;
     let formulario = document.getElementById("form1");
 
     if (fecha == "") {
@@ -97,22 +98,23 @@ function validar () {
     }
 
     if (cantErrores == 0) {
-        guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado);
-        
-        formulario.reset(); /* Resetea el formulario */
+        guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado, adicional);
+        window.location.reload();
+
         return true;
     }
     return false;
 }
 
-async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, service) {
+async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, service, adicional) {
     const formData = {
         "nombre": nombre,
         "apellido": apellido,
         "email": email,
         "telefono": telefono,
         "service": service,
-        "fecha": fecha
+        "fecha": fecha,
+        "adicional": adicional
     };
 
     try {
@@ -121,13 +123,11 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         let eventos = await response.json();
 
         // Combinar con localStorage si existe
-        /*
         const savedData = localStorage.getItem('calendarEvents');
-
         if (savedData) {
             eventos = {...eventos, ...JSON.parse(savedData)};
         }
-        */
+
 
         // Agregar nuevo turno
         if (!eventos[formData.fecha]) {
@@ -139,11 +139,12 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
             cliente: `${formData.nombre} ${formData.apellido}`,
             telefono: formData.telefono,
             email: formData.email,
-            service: formData.service
+            service: formData.service,
+            adicional: formData.adicional
         });
 
         // Guardar en localStorage
-        //localStorage.setItem('calendarEvents', JSON.stringify(eventos));
+        localStorage.setItem('calendarEvents', JSON.stringify(eventos));
         // Guardar en el archivo JSON
 
 
