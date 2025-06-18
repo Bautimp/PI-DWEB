@@ -1,6 +1,7 @@
 :root{
     --colorNaranja: #ff7a00;
     --fondoNegro: #1f2023;
+    --fondoSecundario: rgb(38, 39, 43);
     --colorBlanco: white;
     --fuente: open-sans, sans-serif, Arial, Helvetica, sans-serif;
     --fuenteTam: 20px;
@@ -8,6 +9,7 @@
 
 
 /* ESTILO GLOBAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -27,13 +29,12 @@ header{
 }
 
 #logo {
-    width: 200px;
+    width: 160px;
     height: auto;
     display: block;
     margin: 0 auto;
     position: relative;
     z-index: 2000;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
 }
 
 .navbar #logo{
@@ -43,10 +44,12 @@ header{
     left: 0;
     width: 100%;
     display: flex;
-    z-index: 1000;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
+    z-index: 1005;
 }
 
+.menu {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px;
+}
 .nav-link{
     font-size: 22px;
 }
@@ -62,36 +65,36 @@ header{
 }
 
 #btnTurnos {
-    width: 90px;
+    width: 85px;
     background-color: var(--colorNaranja);
     color: var(--colorBlanco);
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 5px;
     border: none;
     transition: background-color 0.3s ease;
     margin: auto;
-    padding: 3px;
+    padding: 2px;
 }
 
 #btnTurnos:hover {
     background-color: #ff7b0094; /* Cambia el color al pasar el mouse */
 }
 
-#btnRegresar {
-    height: 50px;
-    width: 150px;
-    background-color: var(--colorNaranja);
+#btnCancelar {
+    width: 100px;
+    background-color: #ff110094;
     color: var(--colorBlanco);
-    font-weight: bold;
+    font-size: 22px;
+    /* font-weight: bold; */
     border-radius: 5px;
     border: none;
     transition: background-color 0.3s ease;
     margin: auto;
-    padding: 3px;
+    padding: 2px;
 }
 
-#btnRegresar:hover {
-    background-color: #ff7b0094; /* Cambia el color al pasar el mouse */
+#btnCancelar:hover {
+    background-color: #af201694; /* Cambia el color al pasar el mouse */
 }
 
 
@@ -108,23 +111,27 @@ header{
 }
 
 #pinPartners {
-    color: var(--fondoNegro);
-    background-color: var(--colorBlanco);
+    color: var(--colorBlanco);
+    /* background-color: var(--fondoSecundario); */
+    background-image: url('/images/Backdrop/backdrop.jpg');
+    background-size: cover;
 }
 
 body {
     overflow-x: hidden;
-    background-color: white;
+    background-color: var(--fondoNegro);
 }
 
 #infoPresentacion {
-    background-color: var(--fondoNegro);
+    /* background-color: var(--fondoNegro); */
+    background-image: url('/images/Backdrop/backdrop.jpg');
+    background-size: cover;
     font-family:var(--fuente);
     color: var(--colorBlanco);
     text-align: center;
 }
 
-#tituloService {
+.tituloService {
     color: var(--colorNaranja);
     font-weight: bold;
 }
@@ -143,6 +150,7 @@ body {
     padding-right: 5%;
     padding-left: 5%;
 }
+
 
 /* ESTILO CAROUSEL SERVICE */
 .contenedor-items-services{
@@ -170,6 +178,7 @@ body {
     margin: 20px auto;
     text-align: center;
     font-size: var(--fuenteTam);
+    color: var(--colorBlanco);
 }
 
 .imgServices {
@@ -205,9 +214,9 @@ body {
 }
 
 .textoParteSection {
+    color: var(--colorBlanco);
     font-size: var(--fuenteTam);
     text-align: center;
-
 }
 
 .botonSection{
@@ -245,8 +254,8 @@ body {
     font-size: 35px;
 }
 
-/* ESTILO FORMULARIO DE CONTACTO */
 
+/* ESTILO FORMULARIO DE CONTACTO */
 
 #contacto {
     color: var(--colorBlanco);
@@ -256,14 +265,16 @@ body {
     margin-bottom: 30px;
     margin-top: 30px;
     width: 100%;
-    background-color: var(--colorBlanco);
+    background-color: var(--fondoNegro);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .container{
     width: 80%;
-    background: var(--fondoNegro);
+    background-image: url('/images/Backdrop/backdrop.jpg');
+    background-size: cover;
     border-radius: 6px;
     padding: 30px 60px 40px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -373,6 +384,9 @@ body {
 .content .right-side input[type="button"]:hover {
     background-color: orangered;
 }
+
+
+/* MEDIA QUERIES */
 
 @media (max-width: 950px) {
     .container{

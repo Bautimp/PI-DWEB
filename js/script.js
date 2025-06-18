@@ -12,7 +12,7 @@ function mostrarInfo() {
             switch(arregloImagenes[i].id){
                 case "img1":
                     descripcionService.innerHTML = `
-                        <h2 id="tituloService">PACK-SERVICE RUTINA</h2>
+                        <h2 class="tituloService">PACK-SERVICE RUTINA</h2>
                         <p>
                             Este service pack está recomendado para el mantenimiento óptimo de bicicletas con un uso básico. Sugerimos realizarlo después de <b>35 horas de uso</b> rutinario o, en su defecto, tras un periodo de <b>1 a 2 meses</b> de uso <b>casual</b>, según lo que ocurra <u>primero</u>. <br><br>
                             <ul style="text-align: left;">
@@ -33,7 +33,7 @@ function mostrarInfo() {
                     break;
                 case "img2":
                     descripcionService.innerHTML = `
-                        <h2 id="tituloService">PACK-SERVICE ESTÁNDAR</h2>
+                        <h2 class="tituloService">PACK-SERVICE ESTÁNDAR</h2>
                         <p>
                             Este service pack está diseñado para bicicletas con un uso periódico no casual. Incluye <b>limpieza</b> de rodamientos y partes móviles con una <b><u>máquina de ultrasonido</u></b>, asegurando un mantenimiento más profundo y prolongando la vida útil de sus componentes.  Recomendamos realizarlo después de <b>75-100 horas de uso</b> o, en su defecto, cada <b>3 meses</b>, según lo que ocurra <u>primero</u>.<br><br>
                             <ul style="text-align: left;">
@@ -56,7 +56,7 @@ function mostrarInfo() {
                     break;
                 case "img3":
                     descripcionService.innerHTML = `
-                        <h2 id="tituloService">PACK-SERVICE PREMIUM</h2>
+                        <h2 class="tituloService">PACK-SERVICE PREMIUM</h2>
                         <p>
                             Este service pack premium está diseñado para un mantenimiento completo de la bicicleta, abarcando todos los aspectos de la misma. Incluye <b>limpieza</b> de rodamientos y partes móviles con una máquina de <b><u>ultrasonido</u></b>, asegurando un mantenimiento más profundo y prolongando la vida útil de sus componentes.  Recomendamos realizarlo después de <b>150 horas de uso</b> o, en su defecto, cada <b>4 meses</b>, según lo que ocurra <u>primero</u>.<br><br>
                             <ul style="text-align: left;">
@@ -81,7 +81,7 @@ function mostrarInfo() {
                     break;
                 case "img4":
                     descripcionService.innerHTML = `
-                        <h2 id="tituloService">PACK-SERVICE FRENOS V1</h2>
+                        <h2 class="tituloService">PACK-SERVICE FRENOS V1</h2>
                         <p>
                             Este service para frenos hidráulicos está recomendado para mantener un <b>rendimiento óptimo</b> y seguro del sistema de frenado. Sugerimos realizarlo cada <b>3 a 5 meses</b>, dependiendo del tipo de uso y las exigencias del ciclista, ya sea un uso <u>normal</u> o <u>intensivo</u>.<br><br>
                             <ul style="text-align: left;">
@@ -96,7 +96,7 @@ function mostrarInfo() {
                     break;
                 case "img5":
                     descripcionService.innerHTML = `
-                        <h2 id="tituloService">PACK-SERVICE FRENOS V2</h2>
+                        <h2 class="tituloService">PACK-SERVICE FRENOS V2</h2>
                         <p>
                             Este service para frenos hidráulicos incluye un <b><u>despiece completo</u></b> y un mantenimiento al detalle de todo el sistema de frenado, garantizando su óptimo rendimiento y seguridad. Está recomendado para <b>todo tipo de usuarios</b>, y es fundamental realizarlo al menos <b><u>una vez al año</b></u> para asegurar el correcto funcionamiento del circuito, prevenir desgastes prematuros y evitar posibles fallos en el sistema.<br><br>
                             <ul style="text-align: left;">
