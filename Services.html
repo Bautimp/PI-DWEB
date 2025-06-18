@@ -63,6 +63,7 @@
                   <div id="inputNombre" class="row">
                     <div class="mb-3 col-md-12">
                       <label for="name" class="form-label">Nombre</label>
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="name" placeholder="Ingrese su Nombre" maxlength="50" required>
                     </div>
                     <!-- Mensaje de error Nombre -->
@@ -70,11 +71,20 @@
                       <i class="bi bi-exclamation-circle"></i>
                       El nombre debe tener entre 2 y 50 caracteres de largo <br>
                       Solamente letras, no se pueden ingresar numeros
+=======
+                      <input type="text" class="form-control" id="name" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$" placeholder="Ingrese su Nombre" maxlength="50" required>
+                    </div>
+                    <!-- Mensaje de error Nombre -->
+                    <button type="button" class="error nombre btn btn-outline-danger">
+                      <i class="bi bi-exclamation-circle"></i>
+                      El nombre debe tener entre 2 y 50 caracteres de largo
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                     </button>
                   </div>
                   <div id="inputApellido" class="row">
                     <div class="mb-3 col-md-12">
                       <label for="lastName" class="form-label">Apellido</label>
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="lastName" placeholder="Ingrese su Apellido" maxlength="50" required>
                     </div>
                     <!-- Mensaje de error Apellido -->
@@ -82,6 +92,14 @@
                       <i class="bi bi-exclamation-circle"></i>
                       El apellido debe tener entre 2 y 50 caracteres de largo <br>
                       Solamente letras, no se pueden ingresar numeros
+=======
+                      <input type="text" class="form-control" id="lastName" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$" placeholder="Ingrese su Apellido" maxlength="50" required>
+                    </div>
+                    <!-- Mensaje de error Apellido -->
+                    <button type="button" class="error apellido btn btn-outline-danger">
+                      <i class="bi bi-exclamation-circle"></i>
+                      El apellido debe tener entre 2 y 50 caracteres de largo
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                     </button>
                   </div>
                   <div id="inputEmail" class="row">
@@ -90,7 +108,11 @@
                       <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email" required>
                     </div>
                     <!-- Mensaje de error Correo Electrónico -->
+<<<<<<< HEAD
                     <button type="button" class="mb-3 col-md-12 error email btn btn-outline-danger">
+=======
+                    <button type="button" class="error email btn btn-outline-danger">
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                         <i class="bi bi-exclamation-circle"></i>
                         - El email debe contener al menos un caracter antes del @<br>
                         <i class="bi bi-exclamation-circle"></i>
@@ -105,7 +127,11 @@
                       <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingrese su Teléfono" required>
                     </div>
                     <!-- Mensaje de Error Teléfono -->
+<<<<<<< HEAD
                     <button type="button" class="mb-3 col-md-12 error tel btn btn-outline-danger">
+=======
+                    <button type="button" class="error tel btn btn-outline-danger">
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                       <i class="bi bi-exclamation-circle"></i>
                       Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
                     </button>
@@ -113,6 +139,7 @@
                   <div id="inputFecha" class="row">
                     <div class="mb-3 col-md-12">
                       <label for="fechaService" class="form-label">Fecha del Service</label>
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha" required>
                     </div>
                     <!-- Mensaje de Error Fecha del Service -->
@@ -120,6 +147,10 @@
                       <i class="bi bi-exclamation-circle"></i>
                       Debe seleccionar una fecha para el service
                     </button>
+=======
+                      <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha">
+                    </div>
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                   </div>
                   <div id="inputAnotacion" class="row">
                     <div class="mb-3 col-md-12">
@@ -172,7 +203,11 @@
                       <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
                       <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
                       <!-- Mensaje de Error Service -->
+<<<<<<< HEAD
                       <button type="button" class="error service-carrusel btn btn-outline-danger">
+=======
+                      <button type="button" class="error service btn btn-outline-danger">
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
                         <i class="bi bi-exclamation-circle"></i>
                         Debe seleccionar un Service
                       </button>

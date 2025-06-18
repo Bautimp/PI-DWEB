@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD:Index.html
   <header class="fixed-top">
     <div class="row menu">
       <div class="col-3">
@@ -74,16 +75,77 @@
           </div>
         </nav>
       </div>
+=======
+<header class="fixed-top">
+  <div class="row menu">
+    <div class="col-3">
+      <a href="index.html">
+        <img src="images/Logo/jmbikes.png" alt="logo" id="logo" style="margin-top: 5px;">
+      </a>
+    </div>
+    <div class="col-6" id="opcionesNavbar">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-collapse collapse justify-content-center" id="navbarColor01">
+            <div class="row">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items:  end;">
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                </div>
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link" href="#nosotros">Nosotros</a>
+                  </li>
+                </div>
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link" href="#pinServices">Services</a>
+                  </li>
+                </div>
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link" href="#pinPartners">Partners</a>
+                  </li>
+                </div>
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link" href="#ubicacion">Contacto</a>
+                  </li>
+                </div>
+                <div class="col-2 navOp">
+                  <li>
+                    <a class="nav-link" href="Services.html"><button type="button" id="btnTurnos">Citas</button></a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e:index.html
     </div>
 
-  </header>
+    <div class="col-3">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 10px;">
+        <div class="container-fluid justify-content-end" >
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+</header>
   <!-- CAROUSEL INICIO -->
   <section id="carouselInicio" class="container-fluid" style="margin-top: 86px;">
     <div class="row">
       <div class="col-12 align-items-center" style="margin: 0 auto; padding: 0;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner" style="max-height: 1000px;">
-            <div class="carousel-item active">
+            <div class="carousel-item active" >
               <img src="images/Carousel Inicio/General/carousel3.jpg" class="d-block w-100" alt="img-taller1">
             </div>
             <div class="carousel-item">
@@ -127,6 +189,7 @@
 
   <!--SERVICES -->
   <!-- CAROUSEL DE SERVICIOS -->
+<<<<<<< HEAD:Index.html
   <section id="CarouselServicios" class="container-fluid">
     <div class="row align-items-center">
       <div class="col-12 col-md-6">
@@ -180,11 +243,77 @@
               <span class="carousel-control-next-icon iconTrans" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+=======
+    <section id="CarouselServicios" class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <div class="contenedor-items-services">
+            <div id="carouselExampleIndicators" class="carousel slide align-items-center" data-bs-ride="false"
+              style="max-width: 400px; margin: 0 auto;">
+              <div class="carousel-indicators iconTrans">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+              </div>
+              <div id="carouselServices" class="carousel-inner card card:hover" ontransitionend="mostrarInfo()">
+                <!-- ENLACE A LA PAGINA DE FORMULARIO -->
+                <a href="Services.html">
+                  <div id="img1" class="carousel-item active card:hover">
+                    <img src="images/Cards/Cardsprueba/1.png" class="d-block w-100 imgServices card card:hover"
+                      alt="service1">
+                  </div>
+                  <div id="img2" class="carousel-item">
+                    <img src="images/Cards/Cardsprueba/2.png" class="d-block w-100 imgServices card card:hover"
+                      alt="service2">
+                  </div>
+                  <div id="img3" class="carousel-item">
+                    <img src="images/Cards/Cardsprueba/3.png" class="d-block w-100 imgServices card card:hover"
+                      alt="service3">
+                  </div>
+                  <div id="img4" class="carousel-item">
+                    <img src="images/Cards/Cardsprueba/4.png" class="d-block w-100 imgServices card card:hover"
+                      alt="service4">
+                  </div>
+                  <div id="img5" class="carousel-item">
+                    <img src="images/Cards/Cardsprueba/5.png" class="d-block w-100 imgServices card card:hover"
+                      alt="service5">
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon iconTrans" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon iconTrans" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div><br><br>
+        </div>
+        <!-- DESCRIPCION DE SERVICIOS -->
+
+        <div class="col-12 col-md-6">
+          <div id="TituloDescripcionService" class="contenedor-texto-services">
+            <p>ESTE PACK CONTIENE LOS SIGUIENTES SERVICIOS<br>↓</p>
+          </div>
+          <div id="descripcionService" class="contenedor-texto-services">
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e:index.html
           </div>
         </div><br><br>
       </div>
       <!-- DESCRIPCION DE SERVICIOS -->
 
+<<<<<<< HEAD:Index.html
       <div class="col-12 col-md-6">
         <div id="TituloDescripcionService" class="contenedor-texto-services">
           <p>ESTE PACK CONTIENE LOS SIGUIENTES SERVICIOS<br>↓</p>
@@ -220,6 +349,34 @@
       <div class="col-12 col-md-6">
         <div class="contenedor-imagen-parte">
           <img src="images/Parte digital/parteDigital.png" alt="parte digital" class="imgSecciones">
+=======
+    <!-- SECCIÓN PARTE DE TRABAJO DIGITAL -->
+    <section id="SectionTrabajoDigital" class="container-fluid">
+      <div class="row align-items-center">
+        <!-- SECCIÓN DE TEXTO SOBRE EL PDF -->
+        <div class="col-12 col-md-6 ">
+          <div class="contenedor-texto-parte">
+            <p class="tituloSection tituloParteSection">PARTE DE TRABAJO DIGITAL</p>
+            <p class="textoParteSection">Al finalizar el servicio, recibirás un parte de trabajo digital que incluye un
+              informe detallado de las tareas realizadas, recomendaciones para el mantenimiento futuro y un registro del
+              estado de tu bicicleta. Este documento te permitirá llevar un control preciso del mantenimiento de tu
+              bicicleta y asegurarte de que siempre esté en óptimas condiciones.</p>
+            <div class="row">
+              <!-- BOTÓN PARA VER PARTE DIGITAL -->
+              <div class="col-12 col-md-4 botonSection">
+                <a href="images/Parte digital/parteDigital.pdf" target="_blank">
+                  <button type="button" class="btn btn-primary btnSeleccionarSection">Ver Parte Digital</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SECCIÓN DE LA IMAGEN -->
+        <div class="col-12 col-md-6">
+          <div class="contenedor-imagen-parte">
+            <img src="images/Parte digital/parteDigital.png" alt="parte digital" class="imgSecciones">
+          </div>
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e:index.html
         </div>
       </div>
     </div>
@@ -242,8 +399,12 @@
             <!-- SECCIÓN DE TEXTO SOBRE LOS PARTNERS -->
             <p class="tituloSection tituloParteSection ">NUESTROS PARTNERS</p>
             <p class="textoParteSection">Somos partner oficial del <strong>Team Venzo Argentina</strong></p>
+<<<<<<< HEAD:Index.html
             <p class="textoParteSection">Esta alianza destaca nuestra experiencia en el mantenimiento y configuración de
               bicicletas de alto rendimiento, asegurando que los corredores del equipo compitan al máximo nivel.</p>
+=======
+            <p class="textoParteSection">Esta alianza destaca nuestra experiencia en el mantenimiento y configuración de bicicletas de alto rendimiento, asegurando que los corredores del equipo compitan al máximo nivel.</p>
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e:index.html
             <div class="row">
               <!-- BOTÓN PARA IR AL SITIO DEL PARTNER -->
               <div class="col-12 col-md-4 botonSection">
@@ -308,12 +469,18 @@
             </div>
           </div>
           <div class="right-side">
+<<<<<<< HEAD:Index.html
             <div class="topic-text">
               <h3>¿Tienes una consulta?</h3>
             </div>
             <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
             <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com"
               onsubmit="return validarContacto()">
+=======
+            <div class="topic-text"><h3>¿Tienes una consulta?</h3></div>
+            <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
+            <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com">
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e:index.html
               <div class="input-box">
                 <input type="text" id="nombre" name="nombre" maxlength="80" placeholder="Ingrese su Nombre Completo" required>
               </div>

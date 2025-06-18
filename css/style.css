@@ -113,7 +113,11 @@ header{
 #pinPartners {
     color: var(--colorBlanco);
     /* background-color: var(--fondoSecundario); */
+<<<<<<< HEAD
     background-image: url('images/Backdrop/backdrop.jpg');
+=======
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
 }
 
@@ -124,7 +128,11 @@ body {
 
 #infoPresentacion {
     /* background-color: var(--fondoNegro); */
+<<<<<<< HEAD
     background-image: url('images/Backdrop/backdrop.jpg');
+=======
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
     font-family:var(--fuente);
     color: var(--colorBlanco);
@@ -273,7 +281,11 @@ body {
 
 .container{
     width: 80%;
+<<<<<<< HEAD
     background-image: url('images/Backdrop/backdrop.jpg');
+=======
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
     border-radius: 6px;
     padding: 30px 60px 40px 40px;
@@ -385,6 +397,7 @@ body {
     background-color: orangered;
 }
 
+<<<<<<< HEAD
 .error-box {
     display: none;
     background-color: #ffcccc;
@@ -402,6 +415,8 @@ body {
     -ms-user-select: none;
 }
 
+=======
+>>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
 #TituloDescripcionService{
     visibility: hidden;
 }

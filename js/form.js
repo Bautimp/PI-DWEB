@@ -36,6 +36,9 @@ function validar () {
     let serviceSeleccionado = document.getElementById("opcionSeleccionada").value.trim();
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
+    console.log(fecha);
+    console.log(fecha);
+    console.log(fecha);
     
     if (!esFechaValida(fecha)) {
         error = document.querySelector(".error.fecha");
