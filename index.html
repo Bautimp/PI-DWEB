@@ -13,6 +13,13 @@
 </head>
 
 <body>
+  <!-- Back to top button -->
+  <button type="button" class="btn btn-light btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Explanation -->
+  
   <header class="fixed-top">
     <div class="row menu">
       <div class="col-3">
@@ -64,13 +71,14 @@
       </div>
 
       <div class="col-3">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 10px;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 5px; margin-right: 10px;">
           <div class="container-fluid justify-content-end" >
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
         </nav>
+        
       </div>
     </div>
 
@@ -279,7 +287,7 @@
     </section>
   </div>
   <!-- SECCION FAQ -->
-    <section class="container" id="sectionFaq">
+  <section class="container" id="sectionFaq">
       <div class="row">
         <div class="col-12">
           <p class="tituloParteSection tituloSection">FAQ</p>
@@ -370,59 +378,95 @@
           </div>
         </div>
       </div>
-    </section>
-  <footer>
-    <!-- CONTACTO -->
-    <section id="contacto">
-      <div class="container formulario-contacto">
-        <div class="content">
-          <div class="left-side">
-            <div class="address">
-              <div class="adrress details">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="topic">Dirección</div>
-                <div class="text-one">Juana Koslay, B° Cerros Colorados Manzana 34 Casa 3</div>
-              </div>
-              <div class="phone details">
-                <i class="fas fa-phone-alt"></i>
-                <div class="topic">Telefono</div>
-                <div class="text-one">+54 9 266 425-7210</div>
-              </div>
-              <div class="email details">
-                <i class="fas fa-envelope"></i>
-                <div class="topic">Correo Electrónico</div>
-                <div class="text-one">jmbikesarg@gmail.com</div>
-              </div>
+  </section>
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container formulario-contacto">
+      <div class="content">
+        <div class="left-side">
+          <div class="address">
+            <div class="adrress details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Dirección</div>
+              <div class="text-one">Juana Koslay, B° Cerros Colorados Manzana 34 Casa 3</div>
             </div>
-          </div>
-          <div class="right-side">
-            <div class="topic-text"><h3>¿Tienes otra consulta?</h3></div>
-            <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
-            <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com">
-              <div class="input-box">
-                <input type="text" id="nombre" name="nombre" maxlength="80" placeholder="Ingrese su Nombre Completo" required>
-              </div>
-              <div class="error-box nombre">
-                ERROR! Ingrese un Nombre válido <br>
-                - El Nombre debe contener entre 2 y 80 caracteres<br>
-                - No debe llevar numeros
-              </div>
-              <div class="input-box">
-                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
-              </div>
-              <div class="error-box email">ERROR! Ingrese un correo válido <br>
-                - El email debe contener al menos un caracter antes del @<br>
-                - Contener un dominio válido (algo.com, algo.com.ar)
-              </div>
-              <div class="input-box message-box">
-                <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta" required></textarea>
-              </div>
-              <input type="button" onclick="validarContacto()" value="Enviar">
-            </form>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Telefono</div>
+              <div class="text-one">+54 9 266 425-7210</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Correo Electrónico</div>
+              <div class="text-one">jmbikesarg@gmail.com</div>
+             </div>
           </div>
         </div>
+        <div class="right-side">
+          <div class="topic-text"><h3>¿Tienes otra consulta?</h3></div>
+          <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
+          <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com">
+            <div class="input-box">
+              <input type="text" id="nombre" name="nombre" maxlength="80" placeholder="Ingrese su Nombre Completo" required>
+            </div>
+            <div class="error-box nombre">
+              ERROR! Ingrese un Nombre válido <br>
+              - El Nombre debe contener entre 2 y 80 caracteres<br>
+              - No debe llevar numeros
+            </div>
+            <div class="input-box">
+              <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+            </div>
+            <div class="error-box email">ERROR! Ingrese un correo válido <br>
+              - El email debe contener al menos un caracter antes del @<br>
+              - Contener un dominio válido (algo.com, algo.com.ar)
+            </div>
+            <div class="input-box message-box">
+              <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta" required></textarea>
+            </div>
+            <input type="button" onclick="validarContacto()" value="Enviar">
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="col-12 col-md-3" id="redes" >
+          <div class="row">
+            <div class="col-12">
+              <p class="tituloFooter">SIGUENOS</p>
+            </div>
+          </div>  
+          <div class="row">
+            <div class="col-4 colRedes">
+              <a href="https://wa.me/message/J3I3SCIFURNKH1">
+                <img class="logoRedes" src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-512.png" alt="Whatsapp">
+              </a>
+            </div>
+            <div class="col-4 colRedes">
+              <a href="https://www.instagram.com/jmb1kes/">
+                <img class="logoRedes" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" alt="Whatsapp">
+              </a>
+            </div>
+            <div class="col-4 colRedes">
+              <a href="https://www.facebook.com/profile.php?id=100068867530784&locale=es_LA">
+                <img class="logoRedes" src="https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Facebook-512.png" alt="Whatsapp">
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-md-6">
+          <img src="/images/jmbikes.png" alt="logo" width="100px" height="auto" id="logoFooter">
+      </div>
+      <div class="col-12 col-md-3">
+          <p class="copyRight">© JMBIKES 2025</p>
+      </div>
+      <div class="col-12 container text-center; text-align: center; justify-content-center;">
+        <hr style="margin: auto; color: white; opacity: 0.9;">
+        <p style="text-align: center; color:white">Diseño y Desarrollo a cargo de Garro German, Montes Pantano Juan Bautista, Muñoz Bagnis Jerónimo.</p>
+      </div>
+    </div>
   </footer>
 
   <!-- JS -->
