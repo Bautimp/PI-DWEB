@@ -137,7 +137,7 @@ body {
 }
 
 #tituloNosotros {
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 1%;
     color: var(--colorNaranja);
     font-weight: bold;
@@ -385,6 +385,9 @@ body {
     background-color: orangered;
 }
 
+#TituloDescripcionService{
+    visibility: hidden;
+}
 
 /* MEDIA QUERIES */
 
@@ -424,5 +427,9 @@ body {
     .content .right-side .button {
     display: inline-block;
     margin-top: 6px;
+    }
+    #TituloDescripcionService{
+        visibility: visible;
+        padding-bottom: 5px;
     }
 }

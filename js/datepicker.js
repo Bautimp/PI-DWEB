@@ -1,5 +1,5 @@
 
-let hoy = new Date().getDate();
+let hoy = new Date().valueOf();
 console.log(hoy);
 
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         minDate: "today",
         disable: [
             function(date) {
-                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date)) || date.getDate() === hoy;
+                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date)) || date.valueOf() === hoy;
             }
         ],
         dateFormat: "Y-m-d",
