@@ -33,11 +33,20 @@ function validar () {
     let nombre = document.getElementById("name").value.trim();
     let apellido = document.getElementById("lastName").value.trim();
     let email = document.getElementById("email").value.trim();
-    let serviceSeleccionado = document.getElementById("opcionSeleccionada").value;
+    let serviceSeleccionado = document.getElementById("opcionSeleccionada").value.trim();
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
     
-    if (nombre.length < 2) {
+    if (!esFechaValida(fecha)) {
+        error = document.querySelector(".error.fecha");
+        mostrarElemento(error);
+        cantErrores++;
+    } else {
+        error = document.querySelector(".error.fecha");
+        ocultarElemento(error);
+    }
+
+    if (!esNombreValido(nombre)) {
         error = document.querySelector(".error.nombre"); /* agarra el button con el error */
         mostrarElemento(error); /* lo pasa por parametro al button */
         limpiarInput("name");
@@ -47,7 +56,7 @@ function validar () {
         ocultarElemento(error); /* lo pasa por parametro al button */
     }
 
-    if (apellido.length < 2) {
+    if (!esNombreValido(apellido)) {
         error = document.querySelector(".error.apellido"); /* agarra el button con el error*/
         mostrarElemento(error); /* lo pasa por parametro al button */
         limpiarInput("lastName");
@@ -68,11 +77,11 @@ function validar () {
     }
 
     if (!serviceSeleccionado) {
-        error = document.querySelector(".error.service") /* agarra el button con el error*/
+        error = document.querySelector(".error.service-carrusel") /* agarra el button con el error*/
         mostrarElemento(error); /* lo pasa por parametro al button */
         cantErrores++;
     } else {
-        error = document.querySelector(".error.service") /* agarra el button con el error*/
+        error = document.querySelector(".error.service-carrusel") /* agarra el button con el error*/
         ocultarElemento(error); /* lo pasa por parametro al button */
     }
 
@@ -150,19 +159,24 @@ function ocultarElemento (elemento) {
 
 function esEmailValido(email) {
   let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-  return regex.test(email.trim());
+  return regex.test(email);
 }
 
 function esTelefonoValido(telefono) { /* Función para validar un número de teléfono */
   let regex = /^\+?\d{8,15}$/;
-  return regex.test(telefono.trim());
+  return regex.test(telefono);
 }
 
 function limpiarInput (id) {
     document.getElementById(id).value = "";
 }
 
+function esNombreValido (nombre) {
+    let regex = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,80}$/;
+    return regex.test(nombre);
+}
 
-
-
-
+function esFechaValida(fecha) {
+    const regex = /^(0[1-9]|[12][0-9]|3[01])[\/\-](0[1-9]|1[0-2])[\/\-]\d{4}$/;
+    return regex.test(fecha.trim());
+}

@@ -14,19 +14,18 @@
 
 <body>
   <header class="fixed-top">
-    <div class="row">
+    <div class="row menu">
       <div class="col-3">
         <a href="index.html">
-          <img src="/images/Logo/jmbikes.png" alt="logo" id="logo">
+          <img src="images/Logo/jmbikes.png" alt="logo" id="logo" style="margin-top: 5px;">
         </a>
       </div>
-
       <div class="col-6" id="opcionesNavbar">
         <nav class="navbar navbar-expand-lg navbar-dark">
           <div class="container-fluid">
             <div class="navbar-collapse collapse justify-content-center" id="navbarColor01">
               <div class="row">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items:  end;">
                   <div class="col-2 navOp">
                     <li>
                       <a class="nav-link active" aria-current="page" href="#">Inicio</a>
@@ -54,7 +53,7 @@
                   </div>
                   <div class="col-2 navOp">
                     <li>
-                      <a class="nav-link" href="Services.html"><button type="button" id="btnTurnos">Turnos</button></a>
+                      <a class="nav-link" href="Services.html"><button type="button" id="btnTurnos">Citas</button></a>
                     </li>
                   </div>
                 </ul>
@@ -65,7 +64,7 @@
       </div>
 
       <div class="col-3">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 10px;">
           <div class="container-fluid justify-content-end">
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
@@ -79,9 +78,9 @@
 
   </header>
   <!-- CAROUSEL INICIO -->
-  <section id="carouselInicio" class="container-fluid">
+  <section id="carouselInicio" class="container-fluid" style="margin-top: 86px;">
     <div class="row">
-      <div class="col-12 align-items-center" style="margin: 0 auto; padding: 0">
+      <div class="col-12 align-items-center" style="margin: 0 auto; padding: 0;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner" style="max-height: 1000px;">
             <div class="carousel-item active">
@@ -128,100 +127,103 @@
 
   <!--SERVICES -->
   <!-- CAROUSEL DE SERVICIOS -->
-  <div class="fondoBasico">
-    <section id="CarouselServicios" class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-6">
-          <div class="contenedor-items-services">
-            <div id="carouselExampleIndicators" class="carousel slide align-items-center" data-bs-ride="false"
-              style="max-width: 500px; margin: 0 auto;">
-              <div class="carousel-indicators iconTrans">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                  aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                  aria-label="Slide 5"></button>
-              </div>
-              <div id="carouselServices" class="carousel-inner card card:hover" ontransitionend="mostrarInfo()">
-                <!-- ENLACE A LA PAGINA DE FORMULARIO -->
-                <a href="Services.html">
-                  <div id="img1" class="carousel-item active card:hover">
-                    <img src="images/Cards/Cardsprueba/1.png" class="d-block w-100 imgServices card card:hover"
-                      alt="service1">
-                  </div>
-                  <div id="img2" class="carousel-item">
-                    <img src="images/Cards/Cardsprueba/2.png" class="d-block w-100 imgServices card card:hover"
-                      alt="service2">
-                  </div>
-                  <div id="img3" class="carousel-item">
-                    <img src="images/Cards/Cardsprueba/3.png" class="d-block w-100 imgServices card card:hover"
-                      alt="service3">
-                  </div>
-                  <div id="img4" class="carousel-item">
-                    <img src="images/Cards/Cardsprueba/4.png" class="d-block w-100 imgServices card card:hover"
-                      alt="service4">
-                  </div>
-                  <div id="img5" class="carousel-item">
-                    <img src="images/Cards/Cardsprueba/5.png" class="d-block w-100 imgServices card card:hover"
-                      alt="service5">
-                  </div>
-                </a>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon iconTrans" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon iconTrans" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+  <section id="CarouselServicios" class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <div class="contenedor-items-services">
+          <div id="carouselExampleIndicators" class="carousel slide align-items-center" data-bs-ride="false"
+            style="max-width: 400px; margin: 0 auto;">
+            <div class="carousel-indicators iconTrans">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
             </div>
-          </div><br><br>
-        </div>
-        <!-- DESCRIPCION DE SERVICIOS -->
-        <div class="col-12 col-md-6">
-          <div id="descripcionService" class="contenedor-texto-services">
+            <div id="carouselServices" class="carousel-inner card card:hover" ontransitionend="mostrarInfo()">
+              <!-- ENLACE A LA PAGINA DE FORMULARIO -->
+              <a href="Services.html">
+                <div id="img1" class="carousel-item active card:hover">
+                  <img src="images/Cards/Cardsprueba/1.png" class="d-block w-100 imgServices card card:hover"
+                    alt="service1">
+                </div>
+                <div id="img2" class="carousel-item">
+                  <img src="images/Cards/Cardsprueba/2.png" class="d-block w-100 imgServices card card:hover"
+                    alt="service2">
+                </div>
+                <div id="img3" class="carousel-item">
+                  <img src="images/Cards/Cardsprueba/3.png" class="d-block w-100 imgServices card card:hover"
+                    alt="service3">
+                </div>
+                <div id="img4" class="carousel-item">
+                  <img src="images/Cards/Cardsprueba/4.png" class="d-block w-100 imgServices card card:hover"
+                    alt="service4">
+                </div>
+                <div id="img5" class="carousel-item">
+                  <img src="images/Cards/Cardsprueba/5.png" class="d-block w-100 imgServices card card:hover"
+                    alt="service5">
+                </div>
+              </a>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon iconTrans" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon iconTrans" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-        </div>
+        </div><br><br>
       </div>
-    </section>
+      <!-- DESCRIPCION DE SERVICIOS -->
 
-    <!-- SECCIÓN PARTE DE TRABAJO DIGITAL -->
-    <section id="SectionTrabajoDigital" class="container-fluid">
-      <div class="row align-items-center">
-        <!-- SECCIÓN DE TEXTO SOBRE EL PDF -->
-        <div class="col-12 col-md-6 ">
-          <div class="contenedor-texto-parte">
-            <p class="tituloSection tituloParteSection">PARTE DE TRABAJO DIGITAL</p>
-            <p class="textoParteSection">Al finalizar el servicio, recibirás un parte de trabajo digital que incluye un
-              informe detallado de las tareas realizadas, recomendaciones para el mantenimiento futuro y un registro del
-              estado de tu bicicleta. Este documento te permitirá llevar un control preciso del mantenimiento de tu
-              bicicleta y asegurarte de que siempre esté en óptimas condiciones.</p>
-            <div class="row">
-              <!-- BOTÓN PARA VER PARTE DIGITAL -->
-              <div class="col-12 col-md-4 botonSection">
-                <a href="/images/Parte digital/parteDigital.pdf" target="_blank">
-                  <button type="button" class="btn btn-primary btnSeleccionarSection">Ver Parte Digital</button>
-                </a>
-              </div>
+      <div class="col-12 col-md-6">
+        <div id="TituloDescripcionService" class="contenedor-texto-services">
+          <p>ESTE PACK CONTIENE LOS SIGUIENTES SERVICIOS<br>↓</p>
+        </div>
+        <div id="descripcionService" class="contenedor-texto-services">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PARTE DE TRABAJO DIGITAL -->
+  <section id="SectionTrabajoDigital" class="container-fluid">
+    <div class="row align-items-center">
+      <!-- SECCIÓN DE TEXTO SOBRE EL PDF -->
+      <div class="col-12 col-md-6 ">
+        <div class="contenedor-texto-parte">
+          <p class="tituloSection tituloParteSection">PARTE DE TRABAJO DIGITAL</p>
+          <p class="textoParteSection">Al finalizar el servicio, recibirás un parte de trabajo digital que incluye un
+            informe detallado de las tareas realizadas, recomendaciones para el mantenimiento futuro y un registro del
+            estado de tu bicicleta. Este documento te permitirá llevar un control preciso del mantenimiento de tu
+            bicicleta y asegurarte de que siempre esté en óptimas condiciones.</p>
+          <div class="row">
+            <!-- BOTÓN PARA VER PARTE DIGITAL -->
+            <div class="col-12 col-md-4 botonSection">
+              <a href="images/Parte digital/parteDigital.pdf" target="_blank">
+                <button type="button" class="btn btn-primary btnSeleccionarSection">Ver Parte Digital</button>
+              </a>
             </div>
           </div>
         </div>
-        <!-- SECCIÓN DE LA IMAGEN -->
-        <div class="col-12 col-md-6">
-          <div class="contenedor-imagen-parte">
-            <img src="/images/Parte digital/parteDigital.png" alt="parte digital" class="imgSecciones">
-          </div>
+      </div>
+      <!-- SECCIÓN DE LA IMAGEN -->
+      <div class="col-12 col-md-6">
+        <div class="contenedor-imagen-parte">
+          <img src="images/Parte digital/parteDigital.png" alt="parte digital" class="imgSecciones">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   </div>
 
   <div class="fondoAlt" id="pinPartners">
@@ -239,22 +241,14 @@
           <div class="contenedor-texto-parte ">
             <!-- SECCIÓN DE TEXTO SOBRE LOS PARTNERS -->
             <p class="tituloSection tituloParteSection ">NUESTROS PARTNERS</p>
-            <p class="textoParteSection">En JM Bikes, creemos firmemente en la colaboración para ofrecer la mejor
-              experiencia a nuestros clientes y atletas. Es por ello que forjamos alianzas sólidas con marcas líderes en
-              el sector del ciclismo.</p>
-            <p class="textoParteSection">Nuestro partnership más destacado es con el equipo de <strong>VENZO
-                TEAM</strong> . Su compromiso con la excelencia y el rendimiento en el ciclismo se alinea perfectamente
-              con nuestra filosofía. Contar con un equipo de atletas de su calibre y experiencia nos permite no solo
-              aprender y mejorar continuamente, sino también ofrecer productos y servicios probados bajo las condiciones
-              más exigentes.</p>
-            <p class="textoParteSection">Esta sinergia nos impulsa a seguir innovando y a mantenernos a la vanguardia,
-              garantizando que cada ciclista que confía en nosotros reciba el apoyo y los recursos de los mejores en el
-              campo.</p>
+            <p class="textoParteSection">Somos partner oficial del <strong>Team Venzo Argentina</strong></p>
+            <p class="textoParteSection">Esta alianza destaca nuestra experiencia en el mantenimiento y configuración de
+              bicicletas de alto rendimiento, asegurando que los corredores del equipo compitan al máximo nivel.</p>
             <div class="row">
               <!-- BOTÓN PARA IR AL SITIO DEL PARTNER -->
               <div class="col-12 col-md-4 botonSection">
                 <a href="https://venzoargentina.com.ar/team-venzo/" target="_blank">
-                  <button type="button" class="btn btn-primary btnSeleccionarSection">Ver sitio</button>
+                  <button type="button" class="btn btn-primary btnSeleccionarSection">Visitar</button>
                 </a>
               </div>
             </div>
@@ -270,15 +264,10 @@
           <div class="contenedor-texto-parte ">
             <!-- SECCIÓN DE TEXTO SOBRE LA UBICACIÓN -->
             <p class="tituloSection tituloParteSection ">DONDE ESTAMOS</p>
-            <p class="textoParteSection">¿Listo para darle a tu bicicleta el cuidado que se merece? <br> Te invitamos a
-              nuestro taller JM Bikes en el corazón de San Luis. Nuestra ubicación ha sido pensada para que tu acceso
-              sea sencillo y rápido, sin complicaciones.
-              Aquí, cada detalle está dispuesto para ofrecerte una experiencia cómoda mientras nuestros expertos
-              trabajan en tu compañera de rutas.</p>
+            <p class="textoParteSection">¿Listo para darle a tu bicicleta el cuidado que se merece?<br></p>
             <p class="textoParteSection">Ven y descubre por qué somos la elección preferida de los ciclistas en la
               región. Estaremos encantados de asesorarte personalmente y resolver todas tus dudas. <br> ¡Te esperamos
-              con las
-              puertas abiertas para que tu pasión por el ciclismo siga rodando!</p>
+              con las puertas abiertas para que tu pasión por el ciclismo siga rodando!</p>
           </div>
         </div>
         <!-- IFRAME UBICACION -->
@@ -309,29 +298,40 @@
               <div class="phone details">
                 <i class="fas fa-phone-alt"></i>
                 <div class="topic">Telefono</div>
-                <div class="text-one">+54 9 11 1234-5678</div>
+                <div class="text-one">+54 9 266 425-7210</div>
               </div>
               <div class="email details">
                 <i class="fas fa-envelope"></i>
                 <div class="topic">Correo Electrónico</div>
-                <div class="text-one">genericEmail@gmail.com</div>
+                <div class="text-one">jmbikesarg@gmail.com</div>
               </div>
             </div>
           </div>
           <div class="right-side">
-            <div class="topic-text">Envíanos un Mensaje</div>
-            <p>Envíanos tu consulta para que podamos resolver cualquier duda que tengas.</p>
-            <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com">
+            <div class="topic-text">
+              <h3>¿Tienes una consulta?</h3>
+            </div>
+            <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
+            <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com"
+              onsubmit="return validarContacto()">
               <div class="input-box">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input type="text" id="nombre" name="nombre" maxlength="80" placeholder="Ingrese su Nombre Completo" required>
+              </div>
+              <div class="error-box nombre">ERROR! Ingrese un Nombre válido <br>
+                - El Nombre debe contener entre 2 y 80 caracteres<br>
+                - No debe llevar numeros
               </div>
               <div class="input-box">
-                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+              </div>
+              <div class="error-box email">ERROR! Ingrese un correo válido <br>
+                - El email debe contener al menos un caracter antes del @<br>
+                - Contener un dominio válido (algo.com, algo.com.ar)
               </div>
               <div class="input-box message-box">
-                <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta"></textarea>
+                <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta" required></textarea>
               </div>
-              <input type="button" value="Enviar">
+              <input type="submit" value="Enviar">
             </form>
           </div>
         </div>

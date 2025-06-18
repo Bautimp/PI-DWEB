@@ -1,5 +1,11 @@
 
+let hoy = new Date().valueOf();
+console.log(hoy);
+
+
 document.addEventListener("DOMContentLoaded", async function() {
+    
+    
     const { fechasBloqueadas } = await cargarFechasBloqueadas();
 
     flatpickr("#fechaService", {
@@ -7,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         minDate: "today",
         disable: [
             function(date) {
-                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date));
+                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date)) || date.valueOf() === hoy;
             }
         ],
         dateFormat: "Y-m-d",
