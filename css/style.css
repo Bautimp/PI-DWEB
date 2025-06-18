@@ -254,6 +254,9 @@ body {
     font-size: 35px;
 }
 
+/* ESTILO SECCION FAQ */
+
+
 
 /* ESTILO FORMULARIO DE CONTACTO */
 
@@ -388,6 +391,7 @@ body {
 #TituloDescripcionService{
     visibility: hidden;
 }
+
 
 /* MEDIA QUERIES */
 

@@ -115,3 +115,51 @@ function mostrarInfo() {
         }
     }
 }
+
+function validarContacto () {
+    let nombre = document.getElementById("nombre").value.trim();
+    let correo = document.getElementById("email").value.trim();
+    let cantErrores = 0;
+
+    if (!esNombreValido(nombre)) {
+        cantErrores++;
+        let error = document.querySelector(".error-box .nombre");
+        mostrarElemento(error);
+    } else {
+        let error = document.querySelector(".error-box .nombre");
+        ocultarElemento(error);
+    }
+
+    if (!esEmailValido(correo)) {
+        cantErrores ++;
+        let error = document.querySelector(".error-box .email");
+        mostrarElemento(error);
+    } else {
+        let error = document.querySelector(".error-box .email");
+        ocultarElemento(error);
+    }
+    
+    if (cantErrores != 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function esEmailValido(email) {
+  let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email);
+}
+
+function mostrarElemento (elemento) {
+    elemento.style.display = "block";
+}
+
+function ocultarElemento (elemento) {
+    elemento.style.display = "none";
+}
+
+function esNombreValido (nombre) {
+    let regex = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,80}$/;
+    return regex.test(nombre);
+}

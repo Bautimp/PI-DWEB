@@ -6,24 +6,24 @@ document.addEventListener("DOMContentLoaded", function () { /* Esto para que apl
     }
 
     document.getElementById("btnSeleccionar").addEventListener("click", function () {
-    /* Quitar selección previa */
-    const imagenes = document.querySelectorAll(".img-option");
-    for (let i = 0; i < imagenes.length; i++) {
-        imagenes[i].classList.remove("selected");
-        console.log("Removido");
-    }
+        /* Quitar selección previa */
+        const imagenes = document.querySelectorAll(".img-option");
+        for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].classList.remove("selected");
+            console.log("Removido");
+        }
 
-    /* Obtener imagen activa */
-    let activa = document.querySelector(".carousel-item.active .img-option");
+        /* Obtener imagen activa */
+        let activa = document.querySelector(".carousel-item.active .img-option");
 
-    if (activa) {
-        activa.classList.add("selected");
-        document.getElementById("opcionSeleccionada").value = activa.dataset.value;
+        if (activa) {
+            activa.classList.add("selected");
+            document.getElementById("opcionSeleccionada").value = activa.dataset.value;
 
-        console.log("Valor guardado:", service);
-    } else {
-        console.log("No se encontró imagen activa");
-    }
+            console.log("Valor guardado:", service);
+        } else {
+            console.log("No se encontró imagen activa");
+        }
     });
 });
 
@@ -33,14 +33,21 @@ function validar () {
     let nombre = document.getElementById("name").value.trim();
     let apellido = document.getElementById("lastName").value.trim();
     let email = document.getElementById("email").value.trim();
-    let serviceSeleccionado = document.getElementById("opcionSeleccionada").value;
+    let serviceSeleccionado = document.getElementById("opcionSeleccionada").value.trim();
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
-    console.log(fecha);
-    console.log(fecha);
-    console.log(fecha);
-    
-    if (nombre.length < 2) {
+    let formulario = document.getElementById("form1");
+
+    if (fecha == "") {
+        error = document.querySelector(".error.fecha");
+        mostrarElemento(error);
+        cantErrores++;
+    } else {
+        error = document.querySelector(".error.fecha");
+        ocultarElemento(error);
+    }
+
+    if (!esNombreValido(nombre)) {
         error = document.querySelector(".error.nombre"); /* agarra el button con el error */
         mostrarElemento(error); /* lo pasa por parametro al button */
         limpiarInput("name");
@@ -50,7 +57,7 @@ function validar () {
         ocultarElemento(error); /* lo pasa por parametro al button */
     }
 
-    if (apellido.length < 2) {
+    if (!esNombreValido(apellido)) {
         error = document.querySelector(".error.apellido"); /* agarra el button con el error*/
         mostrarElemento(error); /* lo pasa por parametro al button */
         limpiarInput("lastName");
@@ -71,11 +78,11 @@ function validar () {
     }
 
     if (!serviceSeleccionado) {
-        error = document.querySelector(".error.service") /* agarra el button con el error*/
+        error = document.querySelector(".error.service-carrusel") /* agarra el button con el error*/
         mostrarElemento(error); /* lo pasa por parametro al button */
         cantErrores++;
     } else {
-        error = document.querySelector(".error.service") /* agarra el button con el error*/
+        error = document.querySelector(".error.service-carrusel") /* agarra el button con el error*/
         ocultarElemento(error); /* lo pasa por parametro al button */
     }
 
@@ -91,6 +98,8 @@ function validar () {
 
     if (cantErrores == 0) {
         guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado);
+        
+        formulario.reset(); /* Resetea el formulario */
         return true;
     }
     return false;
@@ -114,12 +123,12 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         // Combinar con localStorage si existe
         /*
         const savedData = localStorage.getItem('calendarEvents');
-        
+
         if (savedData) {
             eventos = {...eventos, ...JSON.parse(savedData)};
         }
         */
-        
+
         // Agregar nuevo turno
         if (!eventos[formData.fecha]) {
             eventos[formData.fecha] = [];
@@ -136,7 +145,7 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         // Guardar en localStorage
         //localStorage.setItem('calendarEvents', JSON.stringify(eventos));
         // Guardar en el archivo JSON
-        
+
 
     } catch (error) {
         console.error("Error al guardar datos:", error);
@@ -152,20 +161,25 @@ function ocultarElemento (elemento) {
 }
 
 function esEmailValido(email) {
-  let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-  return regex.test(email.trim());
+    let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
 }
 
 function esTelefonoValido(telefono) { /* Función para validar un número de teléfono */
-  let regex = /^\+?\d{8,15}$/;
-  return regex.test(telefono.trim());
+    let regex = /^\+?\d{8,15}$/;
+    return regex.test(telefono);
 }
 
 function limpiarInput (id) {
     document.getElementById(id).value = "";
 }
 
+function esNombreValido (nombre) {
+    let regex = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,80}$/;
+    return regex.test(nombre);
+}
 
-
-
-
+function esFechaValida(fecha) {
+    const regex = /^(0[1-9]|[12][0-9]|3[01])[\/\-](0[1-9]|1[0-2])[\/\-]\d{4}$/;
+    return regex.test(fecha.trim());
+}

@@ -55,7 +55,7 @@
     <!-- FORMULARIO -->
     <div class="row">
         <div class="col-12">
-          <form action="mailto:jmbikesarg@gmail.com" id="form1" onsubmit="return validar()">
+          <form action="mailto:jmbikesarg@gmail.com" id="form1" method="post">
             <div class="container mt-4 calendario-carousel">
               <div class="row align-items-start">
                 <!-- Columna Izquierda -->
@@ -113,6 +113,11 @@
                       <label for="fechaService" class="form-label">Fecha del Service</label>
                       <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha">
                     </div>
+                    <!-- Mensaje de Error Fecha del Service -->
+                    <button type="button" class="mb-3 col-md-12 error fecha btn btn-outline-danger">
+                      <i class="bi bi-exclamation-circle"></i>
+                      Debe seleccionar una fecha para el service
+                    </button>
                   </div>
                   <div id="inputAnotacion" class="row">
                     <div class="mb-3 col-md-12">
@@ -165,7 +170,7 @@
                       <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
                       <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
                       <!-- Mensaje de Error Service -->
-                      <button type="button" class="error service btn btn-outline-danger">
+                      <button type="button" class="error service-carrusel btn btn-outline-danger" style="margin:auto; margin-top: 10px;">
                         <i class="bi bi-exclamation-circle"></i>
                         Debe seleccionar un Service
                       </button>
@@ -174,7 +179,7 @@
                 </div>
                 <div class="row align-items-center" style="margin: auto;">
                   <div class="col-12 align-items-center text-center">
-                    <input type="submit" class="btnEnviar" value="Solicitar cita">
+                    <input type="button" onclick="validar()" class="btnEnviar" value="Solicitar cita">
                   </div>
                 </div>
             </div>

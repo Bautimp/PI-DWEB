@@ -13,68 +13,68 @@
 </head>
 
 <body>
-<header class="fixed-top">
-  <div class="row menu">
-    <div class="col-3">
-      <a href="index.html">
-        <img src="images/Logo/jmbikes.png" alt="logo" id="logo" style="margin-top: 5px;">
-      </a>
-    </div>
-    <div class="col-6" id="opcionesNavbar">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <div class="navbar-collapse collapse justify-content-center" id="navbarColor01">
-            <div class="row">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items:  end;">
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                  </li>
-                </div>
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link" href="#nosotros">Nosotros</a>
-                  </li>
-                </div>
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link" href="#pinServices">Services</a>
-                  </li>
-                </div>
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link" href="#pinPartners">Partners</a>
-                  </li>
-                </div>
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link" href="#ubicacion">Contacto</a>
-                  </li>
-                </div>
-                <div class="col-2 navOp">
-                  <li>
-                    <a class="nav-link" href="Services.html"><button type="button" id="btnTurnos">Citas</button></a>
-                  </li>
-                </div>
-              </ul>
+  <header class="fixed-top">
+    <div class="row menu">
+      <div class="col-3">
+        <a href="index.html">
+          <img src="images/Logo/jmbikes.png" alt="logo" id="logo" style="margin-top: 5px;">
+        </a>
+      </div>
+      <div class="col-6" id="opcionesNavbar">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <div class="navbar-collapse collapse justify-content-center" id="navbarColor01">
+              <div class="row">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items:  end;">
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                  </div>
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                  </div>
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link" href="#pinServices">Services</a>
+                    </li>
+                  </div>
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link" href="#pinPartners">Partners</a>
+                    </li>
+                  </div>
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link" href="#ubicacion">Contacto</a>
+                    </li>
+                  </div>
+                  <div class="col-2 navOp">
+                    <li>
+                      <a class="nav-link" href="Services.html"><button type="button" id="btnTurnos">Citas</button></a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+
+      <div class="col-3">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 10px;">
+          <div class="container-fluid justify-content-end" >
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
     </div>
 
-    <div class="col-3">
-      <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 10px;">
-        <div class="container-fluid justify-content-end" >
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </div>
-
-</header>
+  </header>
   <!-- CAROUSEL INICIO -->
   <section id="carouselInicio" class="container-fluid" style="margin-top: 86px;">
     <div class="row">
@@ -181,8 +181,7 @@
             </div>
           </div><br><br>
         </div>
-        <!-- DESCRIPCION DE SERVICIOS -->
-
+        <!-- DESCRIPCION DE SERVICIOS --> 
         <div class="col-12 col-md-6">
           <div id="TituloDescripcionService" class="contenedor-texto-services">
             <p>ESTE PACK CONTIENE LOS SIGUIENTES SERVICIOS<br>↓</p>
@@ -279,7 +278,99 @@
       </div>
     </section>
   </div>
+  <!-- SECCION FAQ -->
+    <section class="container" id="sectionFaq">
+      <div class="row">
+        <div class="col-12">
+          <p class="tituloParteSection tituloSection">FAQ</p>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-12">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- FAQ 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      ¿Es necesario reservar una cita? 
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">No necesariamente, aunque prevalecerán aquellos clientes que si dispongan de una reserva.</div>
+                  </div>
+                </div>
+            <!-- FAQ 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      ¿Si reservo cita, me lo reparan en el momento? 
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">No. Las citas son solamente para dejar la bicicleta en el taller. Excepcionalmente y si la situación lo permite, podría ser reparada al momento.</div>
+                  </div>
+                </div>
+            <!-- FAQ 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      ¿Tengo una cita pero llevo dos bicis, necesito una cita para cada una?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">No hace falta solicitar una cita para cada bici, basta con indicarlo en el apartado de "Datos adicionales"</div>
+                  </div>
+                </div>
+            <!-- FAQ 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Dejé mi bici ayer en el taller ¿puedo pasar a retirarla hoy?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Recibirás un mensaje de texto cuando la bici esté lista para ser retirada. Muchas veces los servicios se complican o requieren un tiempo extra para dejarlas listas, por lo que siempre recomendamos aguarden el mensaje que indica que su bici está terminada.</div>
+                  </div>
+                </div>
+            <!-- FAQ 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      ¿Si compro las piezas en otro sitio, me las instalan?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sí. Aunque el cliente es 100% responsable de los componentes que compra. No podremos asesorarlo para la compra ni atender a las garantías de los productos.</div>
+                  </div>
+                </div>
+            <!-- FAQ 6 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      Vine para hacer unos ajustes y me han cambiado varias piezas más.
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">En JMBikes, nos tomamos la seguridad muy en serio. Nunca saldrá del taller una bicicleta que no vaya a ser segura de rodar, por lo que piezas especialmente del frenado (pastillas, discos...) Las sustituiremos automáticamente si sufren algún tipo de deterioro o desgaste profundo, siempre y cuanto el coste no supere los $30.000, aunque siempre intentaremos brindar un presupuesto sin sorpresas.
+                    Así mismo, hay ciertas reparaciones que no se podrán realizar en condiciones, si no se sustituyen previamente los elementos dañados/castigados. (Cables, fundas, transmisión…)</div>
+                  </div>
+                </div>
+            <!-- FAQ 7 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      No quiero que me cambien ninguna pieza.
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Si por el contrario, tienes muy claro que NO quieres sustituir ninguna pieza, haremos lo posible por realizar los ajustes que la situación nos permita y el cliente será responsable de su decisión.</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
   <footer>
     <!-- CONTACTO -->
     <section id="contacto">
@@ -305,19 +396,28 @@
             </div>
           </div>
           <div class="right-side">
-            <div class="topic-text"><h3>¿Tienes una consulta?</h3></div>
+            <div class="topic-text"><h3>¿Tienes otra consulta?</h3></div>
             <p>Envíanos un mensaje para que podamos resolver cualquier duda que tengas.</p>
             <form id="formularioConsulta" method="post" action="mailto:ejemplo@gmail.com">
               <div class="input-box">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input type="text" id="nombre" name="nombre" maxlength="80" placeholder="Ingrese su Nombre Completo" required>
+              </div>
+              <div class="error-box nombre">
+                ERROR! Ingrese un Nombre válido <br>
+                - El Nombre debe contener entre 2 y 80 caracteres<br>
+                - No debe llevar numeros
               </div>
               <div class="input-box">
-                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+              </div>
+              <div class="error-box email">ERROR! Ingrese un correo válido <br>
+                - El email debe contener al menos un caracter antes del @<br>
+                - Contener un dominio válido (algo.com, algo.com.ar)
               </div>
               <div class="input-box message-box">
-                <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta"></textarea>
+                <textarea name="consulta" id="consulta" placeholder="Ingrese aquí su consulta" required></textarea>
               </div>
-              <input type="button" value="Enviar">
+              <input type="button" onclick="validarContacto()" value="Enviar">
             </form>
           </div>
         </div>
