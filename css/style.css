@@ -113,7 +113,7 @@ header{
 #pinPartners {
     color: var(--colorBlanco);
     /* background-color: var(--fondoSecundario); */
-    background-image: url('images/Backdrop/backdrop.jpg');
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
     background-size: cover;
 }
 
@@ -124,7 +124,7 @@ body {
 
 #infoPresentacion {
     /* background-color: var(--fondoNegro); */
-    background-image: url('images/Backdrop/backdrop.jpg');
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
     background-size: cover;
     font-family:var(--fuente);
     color: var(--colorBlanco);
@@ -273,7 +273,7 @@ body {
 
 .container{
     width: 80%;
-    background-image: url('images/Backdrop/backdrop.jpg');
+    background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
     background-size: cover;
     border-radius: 6px;
     padding: 30px 60px 40px 40px;

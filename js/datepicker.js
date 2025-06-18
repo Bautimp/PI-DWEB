@@ -1,6 +1,5 @@
 
 let hoy = new Date().valueOf();
-console.log(hoy);
 
 
 document.addEventListener("DOMContentLoaded", async function() {

@@ -36,6 +36,9 @@ function validar () {
     let serviceSeleccionado = document.getElementById("opcionSeleccionada").value;
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
+    console.log(fecha);
+    console.log(fecha);
+    console.log(fecha);
     
     if (nombre.length < 2) {
         error = document.querySelector(".error.nombre"); /* agarra el button con el error */
