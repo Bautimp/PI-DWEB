@@ -1,6 +1,6 @@
 
 let hoy = new Date().valueOf();
-
+let timestampMes = "2585600000";
 
 document.addEventListener("DOMContentLoaded", async function() {
     
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         minDate: "today",
         disable: [
             function(date) {
-                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date)) || date.valueOf() === hoy;
+                return date.getDay() === 0 || fechasBloqueadas.includes(formatearFecha(date)) || date.valueOf() === hoy || (date.valueOf()-hoy) >= timestampMes*2;
             }
         ],
         dateFormat: "Y-m-d",
