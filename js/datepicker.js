@@ -1,9 +1,5 @@
 
 let hoy = new Date().valueOf();
-<<<<<<< HEAD
-console.log(hoy);
-=======
->>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
 
 
 document.addEventListener("DOMContentLoaded", async function() {

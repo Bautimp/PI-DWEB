@@ -17,6 +17,14 @@
     font-family: var(--fuente);
 }
 
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+
 
 /* ESTILO NAVBAR  */
 
@@ -113,11 +121,7 @@ header{
 #pinPartners {
     color: var(--colorBlanco);
     /* background-color: var(--fondoSecundario); */
-<<<<<<< HEAD
-    background-image: url('images/Backdrop/backdrop.jpg');
-=======
     background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
->>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
 }
 
@@ -128,11 +132,7 @@ body {
 
 #infoPresentacion {
     /* background-color: var(--fondoNegro); */
-<<<<<<< HEAD
-    background-image: url('images/Backdrop/backdrop.jpg');
-=======
     background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
->>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
     font-family:var(--fuente);
     color: var(--colorBlanco);
@@ -262,6 +262,9 @@ body {
     font-size: 35px;
 }
 
+/* ESTILO SECCION FAQ */
+
+
 
 /* ESTILO FORMULARIO DE CONTACTO */
 
@@ -281,11 +284,7 @@ body {
 
 .container{
     width: 80%;
-<<<<<<< HEAD
-    background-image: url('images/Backdrop/backdrop.jpg');
-=======
     background-image: url("https://i.postimg.cc/0yL3bc8n/backdrop.jpg");
->>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
     background-size: cover;
     border-radius: 6px;
     padding: 30px 60px 40px 40px;
@@ -397,7 +396,58 @@ body {
     background-color: orangered;
 }
 
-<<<<<<< HEAD
+#TituloDescripcionService{
+    visibility: hidden;
+}
+
+/* ESTILO FOOTER */
+
+#logoFooter {
+    align-items: center;
+    width: 400px;
+    height: auto;
+    display: flex;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.copyRight {
+    color: rgb(68, 58, 58);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+#redes {
+    color: var(--colorNaranja);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.logoRedes{
+    width: 50px;
+}
+
+.colRedes{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
 .error-box {
     display: none;
     background-color: #ffcccc;
@@ -413,12 +463,6 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-}
-
-=======
->>>>>>> 84aa7bc1e4ee2bb5a7a8e9b8764e6acc5be4cc1e
-#TituloDescripcionService{
-    visibility: hidden;
 }
 
 /* MEDIA QUERIES */

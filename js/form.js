@@ -4,26 +4,28 @@ document.addEventListener("DOMContentLoaded", function () { /* Esto para que apl
     for (let e = 0; e < errores.length; e++) {
         errores[e].style.display = "none";
     }
+    let success = document.querySelector(".success-box");
+    ocultarElemento(success);
 
     document.getElementById("btnSeleccionar").addEventListener("click", function () {
-    /* Quitar selección previa */
-    const imagenes = document.querySelectorAll(".img-option");
-    for (let i = 0; i < imagenes.length; i++) {
-        imagenes[i].classList.remove("selected");
-        console.log("Removido");
-    }
+        /* Quitar selección previa */
+        const imagenes = document.querySelectorAll(".img-option");
+        for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].classList.remove("selected");
+            console.log("Removido");
+        }
 
-    /* Obtener imagen activa */
-    let activa = document.querySelector(".carousel-item.active .img-option");
+        /* Obtener imagen activa */
+        let activa = document.querySelector(".carousel-item.active .img-option");
 
-    if (activa) {
-        activa.classList.add("selected");
-        document.getElementById("opcionSeleccionada").value = activa.dataset.value;
+        if (activa) {
+            activa.classList.add("selected");
+            document.getElementById("opcionSeleccionada").value = activa.dataset.value;
 
-        console.log("Valor guardado:", service);
-    } else {
-        console.log("No se encontró imagen activa");
-    }
+            console.log("Valor guardado:", service);
+        } else {
+            console.log("No se encontró imagen activa");
+        }
     });
 });
 
@@ -36,11 +38,10 @@ function validar () {
     let serviceSeleccionado = document.getElementById("opcionSeleccionada").value.trim();
     let tel = document.getElementById("tel").value.trim();
     let fecha = document.getElementById("fechaService").value;
-    console.log(fecha);
-    console.log(fecha);
-    console.log(fecha);
-    
-    if (!esFechaValida(fecha)) {
+    let adicional  = document.getElementById("anotacion").value;
+    let formulario = document.getElementById("form1");
+
+    if (fecha == "") {
         error = document.querySelector(".error.fecha");
         mostrarElemento(error);
         cantErrores++;
@@ -99,20 +100,31 @@ function validar () {
     }
 
     if (cantErrores == 0) {
-        guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado);
+        guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado, adicional);
+        window.location.reload();
+        alert("Formulario enviado correctamente");
+        /* Esto mostraria el bloque de success-box, un mensaje que dice formulario enviado
+        let success = document.querySelector(".success-box");
+        mostrarElemento(success);
+         */
+
         return true;
-    }
-    return false;
+    } /* else {
+        let success = document.querySelector(".success-box");
+        ocultarElemento(success);
+        return false;
+    } */
 }
 
-async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, service) {
+async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, service, adicional) {
     const formData = {
         "nombre": nombre,
         "apellido": apellido,
         "email": email,
         "telefono": telefono,
         "service": service,
-        "fecha": fecha
+        "fecha": fecha,
+        "adicional": adicional
     };
 
     try {
@@ -121,14 +133,12 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
         let eventos = await response.json();
 
         // Combinar con localStorage si existe
-        /*
         const savedData = localStorage.getItem('calendarEvents');
-        
         if (savedData) {
             eventos = {...eventos, ...JSON.parse(savedData)};
         }
-        */
-        
+
+
         // Agregar nuevo turno
         if (!eventos[formData.fecha]) {
             eventos[formData.fecha] = [];
@@ -139,13 +149,14 @@ async function guardarDatosFormulario(nombre, apellido, email, telefono, fecha, 
             cliente: `${formData.nombre} ${formData.apellido}`,
             telefono: formData.telefono,
             email: formData.email,
-            service: formData.service
+            service: formData.service,
+            adicional: formData.adicional
         });
 
         // Guardar en localStorage
-        //localStorage.setItem('calendarEvents', JSON.stringify(eventos));
+        localStorage.setItem('calendarEvents', JSON.stringify(eventos));
         // Guardar en el archivo JSON
-        
+
 
     } catch (error) {
         console.error("Error al guardar datos:", error);
@@ -161,13 +172,13 @@ function ocultarElemento (elemento) {
 }
 
 function esEmailValido(email) {
-  let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-  return regex.test(email);
+    let regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
 }
 
 function esTelefonoValido(telefono) { /* Función para validar un número de teléfono */
-  let regex = /^\+?\d{8,15}$/;
-  return regex.test(telefono);
+    let regex = /^\+?\d{8,15}$/;
+    return regex.test(telefono);
 }
 
 function limpiarInput (id) {

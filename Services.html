@@ -37,7 +37,7 @@
           </div>
         </nav>
       </div>
-    </div> 
+    </div>
   </header>
 
 
@@ -47,152 +47,199 @@
       <div class="col-12">
         <h2 class="text-center mb-3 tituloService">RESERVAR CITA</h2>
         <p class="infoService">
-          La cita será siempre para dejar la bicicleta en el taller. En ningún caso la reparación se realizará al momento salvo que las condiciones así lo permitan y previo acuerdo con el mecánico. 
-          Al finalizar la reparación, recibirá un mensaje de texto y podrá retirar su bicicleta dentro del horario acordado.
+          La cita será siempre para dejar la bicicleta en el taller. En ningún caso la reparación se realizará al
+          momento salvo que las condiciones así lo permitan y previo acuerdo con el mecánico.
+          Al finalizar la reparación, recibirá un mensaje de texto y podrá retirar su bicicleta dentro del horario
+          acordado.
         </p>
       </div>
     </div>
     <!-- FORMULARIO -->
     <div class="row">
-        <div class="col-12">
-          <form action="mailto:jmbikesarg@gmail.com" id="form1" onsubmit="return validar()">
-            <div class="container mt-4 calendario-carousel">
-              <div class="row align-items-start">
-                <!-- Columna Izquierda -->
-                <div class="col-md-7 mb-3">
-                  <div id="inputNombre" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="name" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="name" placeholder="Ingrese su Nombre" maxlength="50" required>
-                    </div>
-                    <!-- Mensaje de error Nombre -->
-                    <button type="button" class="mb-3 col-md-12 error nombre btn btn-outline-danger">
-                      <i class="bi bi-exclamation-circle"></i>
-                      El nombre debe tener entre 2 y 50 caracteres de largo <br>
-                      Solamente letras, no se pueden ingresar numeros
-                    </button>
+      <div class="col-12">
+        <form action="mailto:jmbikesarg@gmail.com" id="form1" method="post">
+          <div class="container mt-4 calendario-carousel">
+            <div class="row align-items-start">
+              <!-- Columna Izquierda -->
+              <div class="col-md-7 mb-3">
+                <div id="inputNombre" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
+                      placeholder="Ingrese su Nombre" maxlength="50" required>
                   </div>
-                  <div id="inputApellido" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="lastName" class="form-label">Apellido</label>
-                      <input type="text" class="form-control" id="lastName" placeholder="Ingrese su Apellido" maxlength="50" required>
-                    </div>
-                    <!-- Mensaje de error Apellido -->
-                    <button type="button" class="mb-3 col-md-12 error apellido btn btn-outline-danger">
-                      <i class="bi bi-exclamation-circle"></i>
-                      El apellido debe tener entre 2 y 50 caracteres de largo <br>
-                      Solamente letras, no se pueden ingresar numeros
-                    </button>
+                  <!-- Mensaje de error Nombre -->
+                  <button type="button" class="error nombre btn btn-outline-danger">
+                    <i class="bi bi-exclamation-circle"></i>
+                    El nombre debe tener entre 2 y 50 caracteres de largo
+                  </button>
+                </div>
+                <div id="inputApellido" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" pattern="^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{2,50}$"
+                      placeholder="Ingrese su Apellido" maxlength="50" required>
                   </div>
-                  <div id="inputEmail" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="email" class="form-label">Correo Electrónico</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email" required>
-                    </div>
-                    <!-- Mensaje de error Correo Electrónico -->
-                    <button type="button" class="mb-3 col-md-12 error email btn btn-outline-danger">
-                        <i class="bi bi-exclamation-circle"></i>
-                        - El email debe contener al menos un caracter antes del @<br>
-                        <i class="bi bi-exclamation-circle"></i>
-                        - Contener un dominio válido (algo.com, algo.com.ar) <br>
-                        <i class="bi bi-exclamation-circle"></i>
-                        - No tener espacios
-                    </button>
+                  <!-- Mensaje de error Apellido -->
+                  <button type="button" class="error apellido btn btn-outline-danger">
+                    <i class="bi bi-exclamation-circle"></i>
+                    El apellido debe tener entre 2 y 50 caracteres de largo
+                  </button>
+                </div>
+                <div id="inputEmail" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email"
+                      required>
                   </div>
-                  <div id="inputTelefono" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="tel" class="form-label">Numero de Teléfono</label>
-                      <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingrese su Teléfono" required>
-                    </div>
-                    <!-- Mensaje de Error Teléfono -->
-                    <button type="button" class="mb-3 col-md-12 error tel btn btn-outline-danger">
-                      <i class="bi bi-exclamation-circle"></i>
-                      Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
-                    </button>
+                  <!-- Mensaje de error Correo Electrónico -->
+                  <button type="button" class="error email btn btn-outline-danger">
+                    <i class="bi bi-exclamation-circle"></i>
+                    - El email debe contener al menos un caracter antes del @<br>
+                    <i class="bi bi-exclamation-circle"></i>
+                    - Contener un dominio válido (algo.com, algo.com.ar) <br>
+                    <i class="bi bi-exclamation-circle"></i>
+                    - No tener espacios
+                  </button>
+                </div>
+                <div id="inputTelefono" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="tel" class="form-label">Numero de Teléfono</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Ingrese su Teléfono"
+                      required>
                   </div>
-                  <div id="inputFecha" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="fechaService" class="form-label">Fecha del Service</label>
-                      <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha" required>
-                    </div>
-                    <!-- Mensaje de Error Fecha del Service -->
-                    <button type="button" class="mb-3 col-md-12 error fecha btn btn-outline-danger">
-                      <i class="bi bi-exclamation-circle"></i>
-                      Debe seleccionar una fecha para el service
-                    </button>
+                  <!-- Mensaje de Error Teléfono -->
+                  <button type="button" class="error tel btn btn-outline-danger">
+                    <i class="bi bi-exclamation-circle"></i>
+                    Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
+                  </button>
+                </div>
+                <div id="inputFecha" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="fechaService" class="form-label">Fecha del Service</label>
+                    <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha">
                   </div>
-                  <div id="inputAnotacion" class="row">
-                    <div class="mb-3 col-md-12">
-                      <label for="anotacion" class="form-label">Datos adicionales</label>
-                      <textarea class="form-control" id="anotacion" rows="3" placeholder="Puedes detallarnos tus dudas sobre los packs, servicios adicionales o detalles a tener en cuenta a la hora de organizar tu cita para el service. (opcional)"></textarea>
-                    </div>
+                  <!-- Mensaje de Error Fecha del Service -->
+                  <button type="button" class="mb-3 col-md-12 error fecha btn btn-outline-danger">
+                    <i class="bi bi-exclamation-circle"></i>
+                    Debe seleccionar una fecha para el service
+                  </button>
+                </div>
+                <div id="inputAnotacion" class="row">
+                  <div class="mb-3 col-md-12">
+                    <label for="anotacion" class="form-label">Datos adicionales (opcional)</label>
+                    <textarea class="form-control" id="anotacion" rows="3"
+                      placeholder="Dudas sobre los packs, servicios adicionales o detalles a tener en cuenta para tu service."></textarea>
                   </div>
                 </div>
-                <!-- Columna Derecha -->
-                <div class="col-md-5  text-center">
-                  <label class="form-label">Seleccione el service:</label>
-                  <div class="mb-4 mx-auto" style="max-width: 300px;">
-                    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img data-value="opcion1" src="images/Cards/1.png" class="d-block w-100 img-option"
-                            alt="service1">
-                        </div>
-                        <div class="carousel-item">
-                          <img data-value="opcion2" src="images/Cards/2.png" class="d-block w-100 img-option"
-                            alt="service2">
-                        </div>
-                        <div class="carousel-item">
-                          <img data-value="opcion3" src="images/Cards/3.png" class="d-block w-100 img-option"
-                            alt="service3">
-                        </div>
-                        <div class="carousel-item">
-                          <img data-value="opcion4" src="images/Cards/4.png" class="d-block w-100 img-option"
-                            alt="service4">
-                        </div>
-                        <div class="carousel-item">
-                          <img data-value="opcion5" src="images/Cards/5.png" class="d-block w-100 img-option"
-                            alt="service5">
-                        </div>
+              </div>
+              <!-- Columna Derecha -->
+              <div class="col-md-5  text-center">
+                <label class="form-label">Seleccione el service:</label>
+                <div class="mb-4 mx-auto" style="max-width: 300px;">
+                  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img data-value="opcion1" src="images/Cards/1.png" class="d-block w-100 img-option"
+                          alt="service1">
                       </div>
-                      <button class="carousel-control-prev" type="button"
-                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button"
-                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
+                      <div class="carousel-item">
+                        <img data-value="opcion2" src="images/Cards/2.png" class="d-block w-100 img-option"
+                          alt="service2">
+                      </div>
+                      <div class="carousel-item">
+                        <img data-value="opcion3" src="images/Cards/3.png" class="d-block w-100 img-option"
+                          alt="service3">
+                      </div>
+                      <div class="carousel-item">
+                        <img data-value="opcion4" src="images/Cards/4.png" class="d-block w-100 img-option"
+                          alt="service4">
+                      </div>
+                      <div class="carousel-item">
+                        <img data-value="opcion5" src="images/Cards/5.png" class="d-block w-100 img-option"
+                          alt="service5">
+                      </div>
                     </div>
-                  </div>
-                  <div id="seccionBotonServicio" class="row" style="padding-top: 25px;">
-                    <div class="mb-4 mx-auto">
-                      <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
-                      <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
-                      <!-- Mensaje de Error Service -->
-                      <button type="button" class="error service-carrusel btn btn-outline-danger">
-                        <i class="bi bi-exclamation-circle"></i>
-                        Debe seleccionar un Service
-                      </button>
-                    </div>
+                    <button class="carousel-control-prev" type="button"
+                      data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                      data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
                 </div>
-                <div class="row align-items-center" style="margin: auto;">
-                  <div class="col-12 align-items-center text-center">
-                    <input type="submit" class="btnEnviar" value="Solicitar cita">
+                <div id="seccionBotonServicio" class="row" style="padding-top: 25px;">
+                  <div class="mb-4 mx-auto">
+                    <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
+                    <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
+                    <!-- Mensaje de Error Service -->
+                    <button type="button" class="error service-carrusel btn btn-outline-danger"
+                      style="margin:auto; margin-top: 10px;">
+                      <i class="bi bi-exclamation-circle"></i>
+                      Debe seleccionar un Service
+                    </button>
                   </div>
                 </div>
+              </div>
+              <div class="row align-items-center" style="margin: auto;">
+                <div class="col-12 align-items-center text-center">
+                  <input type="button" onclick="validar()" class="btnEnviar" value="Solicitar cita">
+                  <div class="success-box">Formulario enviado correctamente</div>
+                </div>
+              </div>
             </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer>
-
+    <div class="row">
+      <div class="col-12 col-md-3" id="redes">
+        <div class="row">
+          <div class="col-12">
+            <p class="tituloFooter">SIGUENOS</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 colRedes">
+            <a href="https://wa.me/message/J3I3SCIFURNKH1">
+              <img class="logoRedes"
+                src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-512.png"
+                alt="Whatsapp">
+            </a>
+          </div>
+          <div class="col-4 colRedes">
+            <a href="https://www.instagram.com/jmb1kes/">
+              <img class="logoRedes" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png"
+                alt="Whatsapp">
+            </a>
+          </div>
+          <div class="col-4 colRedes">
+            <a href="https://www.facebook.com/profile.php?id=100068867530784&locale=es_LA">
+              <img class="logoRedes" src="https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Facebook-512.png"
+                alt="Whatsapp">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="images/Logo/jmbikes.png" alt="logo" width="100px" height="auto" id="logoFooter">
+      </div>
+      <div class="col-12 col-md-3">
+        <p class="copyRight">© JMBIKES 2025</p>
+      </div>
+      <div class="col-12 container text-center; text-align: center; justify-content-center;">
+        <hr style="margin: auto; color: white; opacity: 0.9;">
+        <p style="text-align: center; color:white">Diseño y Desarrollo a cargo de Garro German, Montes Pantano Juan
+          Bautista, Muñoz Bagnis Jerónimo.</p>
+      </div>
+    </div>
   </footer>
 
   <!-- JS -->

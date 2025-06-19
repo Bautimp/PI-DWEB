@@ -1,4 +1,4 @@
-:root{
+:root {
     --colorNaranja: #ff7a00;
     --fondoNegro: #1f2023;
     --colorBlanco: white;
@@ -37,6 +37,7 @@ body {
 .carousel-inner {
     border-radius: 15px;
 }
+
 .selected {
     border: 4px solid var(--colorNaranja);
     border-radius: 15px;
@@ -64,6 +65,29 @@ body {
     font-size: 14px;
     font-family: Arial, sans-serif;
     margin: 10px 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.success-box {
+    display: none;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #0f5132;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+    text-align: center;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .btnEnviar {
@@ -77,32 +101,42 @@ body {
 
 
 /* ESTILO CALENDARIO*/
-.dayContainer, .flatpickr-rContainer, .flatpickr-weekdaycontainer, .flatpickr-months, .flatpickr-current-month, .arrowUp, .arrowDown{
+.dayContainer,
+.flatpickr-rContainer,
+.flatpickr-weekdaycontainer,
+.flatpickr-months,
+.flatpickr-current-month,
+.arrowUp,
+.arrowDown {
     background-color: white;
 
-    .numInputWrapper{
+    .numInputWrapper {
         background-color: white;
         color: black;
     }
-    .flatpickr-next-month, .flatpickr-prev-month{
+
+    .flatpickr-next-month,
+    .flatpickr-prev-month {
         background-color: white;
-        path, svg{
+
+        path,
+        svg {
             background-color: white;
         }
     }
 
 
-    span.flatpickr-day{
+    span.flatpickr-day {
         color: black;
         background-color: rgb(134, 237, 118);
     }
 
-    span.flatpickr-disabled{
+    span.flatpickr-disabled {
         color: #a89f9f;
         background-color: white;
     }
 
-    .flatpickr-monthDropdown-months option{
+    .flatpickr-monthDropdown-months option {
         color: var(--colorBlanco);
         background-color: var(--fondoNegro) !important;
     }
