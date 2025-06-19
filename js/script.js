@@ -144,6 +144,8 @@ function mostrarInfo() {
 function validarContacto () {
     let nombre = document.getElementById("nombre").value.trim();
     let correo = document.getElementById("email").value.trim();
+    let consulta = document.getElementById("consulta").value.trim();
+    let formulario = document.getElementById("formularioConsulta");
     let cantErrores = 0;
 
     if (!esNombreValido(nombre)) {
@@ -163,11 +165,23 @@ function validarContacto () {
         let error = document.querySelector(".error-box.email");
         ocultarElemento(error);
     }
+
+    if(consulta == ""){
+        cantErrores++;
+        let error = document.querySelector(".error-box.consulta");
+        mostrarElemento(error);
+    } else{
+        let error = document.querySelector(".error-box.consulta");
+        ocultarElemento(error);
+    }
+
     
-    if (cantErrores != 0) {
-        return false;
-    } else {
+    if (cantErrores === 0) {
+        alert("Formulario enviado correctamente");
+        formulario.reset();
         return true;
+    } else {
+        return false;
     }
 }
 

@@ -465,6 +465,15 @@ body {
     -ms-user-select: none;
 }
 
+.btnEnviar {
+    color: var(--colorBlanco);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 30px;
+    border: none;
+    background-color: rgb(43, 136, 51);
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 950px) {

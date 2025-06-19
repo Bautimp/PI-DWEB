@@ -101,8 +101,10 @@ function validar () {
 
     if (cantErrores == 0) {
         guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado, adicional);
-        window.location.reload();
         alert("Formulario enviado correctamente");
+        formulario.reset();
+        window.location.reload();
+
         /* Esto mostraria el bloque de success-box, un mensaje que dice formulario enviado
         let success = document.querySelector(".success-box");
         mostrarElemento(success);

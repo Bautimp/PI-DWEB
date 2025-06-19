@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="Taller de bicicletas, bicicleta, taller, tubi">
+  <meta name="author" content="Garro German, Montes Pantano Juan Bautista, Muñoz Bagnis Jerónimo">
+  <meta name="description" content="JMBikes es un taller especializado en el mantenimiento y reparación de bicicletas, ofreciendo servicios de alta calidad para ciclistas de todos los niveles.">
   <title>JMBIKES - SERVICIO ESPECIALZIADO PARA BICICLETAS</title>
+  <link rel="shortcut icon" href="images/Logo/jmbikes.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -21,7 +24,7 @@
     <div class="row">
       <div class="col-2">
         <a href="index.html">
-          <img src="images/Logo/jmbikes.png" alt="logo" id="logo" style="padding-top: 10px">
+          <img src="images/Logo/jmbikes.webp" alt="logo" id="logo" style="padding-top: 10px">
         </a>
       </div>
       <div class="col-10" id="opcionesNavbar">
@@ -30,7 +33,9 @@
             <div class="row">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <div class="col-12 navOp ">
-                  <a class="nav-link" href="index.html"><button type="button" id="btnCancelar">Cancelar</button></a>
+                  <a class="nav-link" href="index.html">
+                    <button type="button" id="btnCancelar">Cancelar</button>
+                  </a>
                 </div>
               </ul>
             </div>
@@ -69,10 +74,10 @@
                       placeholder="Ingrese su Nombre" maxlength="50" required>
                   </div>
                   <!-- Mensaje de error Nombre -->
-                  <button type="button" class="error nombre btn btn-outline-danger">
+                  <div class="error nombre btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
                     El nombre debe tener entre 2 y 50 caracteres de largo
-                  </button>
+                  </div>
                 </div>
                 <div id="inputApellido" class="row">
                   <div class="mb-3 col-md-12">
@@ -81,10 +86,10 @@
                       placeholder="Ingrese su Apellido" maxlength="50" required>
                   </div>
                   <!-- Mensaje de error Apellido -->
-                  <button type="button" class="error apellido btn btn-outline-danger">
+                  <div class="error apellido btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
                     El apellido debe tener entre 2 y 50 caracteres de largo
-                  </button>
+                  </div>
                 </div>
                 <div id="inputEmail" class="row">
                   <div class="mb-3 col-md-12">
@@ -93,14 +98,14 @@
                       required>
                   </div>
                   <!-- Mensaje de error Correo Electrónico -->
-                  <button type="button" class="error email btn btn-outline-danger">
+                  <div class="error email btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
                     - El email debe contener al menos un caracter antes del @<br>
                     <i class="bi bi-exclamation-circle"></i>
                     - Contener un dominio válido (algo.com, algo.com.ar) <br>
                     <i class="bi bi-exclamation-circle"></i>
                     - No tener espacios
-                  </button>
+                  </div>
                 </div>
                 <div id="inputTelefono" class="row">
                   <div class="mb-3 col-md-12">
@@ -109,10 +114,10 @@
                       required>
                   </div>
                   <!-- Mensaje de Error Teléfono -->
-                  <button type="button" class="error tel btn btn-outline-danger">
+                  <div class="error tel btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
                     Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
-                  </button>
+                  </div>
                 </div>
                 <div id="inputFecha" class="row">
                   <div class="mb-3 col-md-12">
@@ -120,10 +125,10 @@
                     <input type="text" class="form-control" id="fechaService" placeholder="Seleccione fecha">
                   </div>
                   <!-- Mensaje de Error Fecha del Service -->
-                  <button type="button" class="mb-3 col-md-12 error fecha btn btn-outline-danger">
+                  <div class="mb-3 col-md-12 error fecha btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
                     Debe seleccionar una fecha para el service
-                  </button>
+                  </div>
                 </div>
                 <div id="inputAnotacion" class="row">
                   <div class="mb-3 col-md-12">
@@ -177,11 +182,11 @@
                     <input type="hidden" name="opcionSeleccionada" id="opcionSeleccionada" required>
                     <button type="button" id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
                     <!-- Mensaje de Error Service -->
-                    <button type="button" class="error service-carrusel btn btn-outline-danger"
+                    <div class="error service-carrusel btn btn-outline-danger"
                       style="margin:auto; margin-top: 10px;">
                       <i class="bi bi-exclamation-circle"></i>
                       Debe seleccionar un Service
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,7 +234,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <img src="images/Logo/jmbikes.png" alt="logo" width="100px" height="auto" id="logoFooter">
+        <img src="images/Logo/jmbikes.webp" alt="logo" width="100px" height="auto" id="logoFooter">
       </div>
       <div class="col-12 col-md-3">
         <p class="copyRight">© JMBIKES 2025</p>
