@@ -76,7 +76,10 @@
                   <!-- Mensaje de error Nombre -->
                   <div class="error nombre btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
-                    El nombre debe tener entre 2 y 50 caracteres de largo
+                    Por favor, ingrese un nombre válido.<br>
+                    - Debe contener entre 2 y 50 caracteres.<br>
+                    - Solo se permiten letras, acentos y espacios.<br>
+                    - No se permiten números ni caracteres especiales.
                   </div>
                 </div>
                 <div id="inputApellido" class="row">
@@ -88,7 +91,10 @@
                   <!-- Mensaje de error Apellido -->
                   <div class="error apellido btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
-                    El apellido debe tener entre 2 y 50 caracteres de largo
+                    Por favor, ingrese un apellido válido.<br>
+                    - Debe contener entre 2 y 50 caracteres.<br>
+                    - Solo se permiten letras, acentos y espacios.<br>
+                    - No se permiten números ni caracteres especiales.
                   </div>
                 </div>
                 <div id="inputEmail" class="row">
@@ -100,11 +106,11 @@
                   <!-- Mensaje de error Correo Electrónico -->
                   <div class="error email btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
-                    - El email debe contener al menos un caracter antes del @<br>
-                    <i class="bi bi-exclamation-circle"></i>
-                    - Contener un dominio válido (algo.com, algo.com.ar) <br>
-                    <i class="bi bi-exclamation-circle"></i>
-                    - No tener espacios
+                    Por favor, ingrese un correo electrónico válido.<br>
+                    - Debe incluir un nombre de usuario antes del @.<br>
+                    - Debe contener un dominio válido (ejemplo: algo.com, algo.com.ar).<br>
+                    - No debe incluir espacios.<br>
+                    - Ejemplo: usuario@ejemplo.com
                   </div>
                 </div>
                 <div id="inputTelefono" class="row">
@@ -116,7 +122,10 @@
                   <!-- Mensaje de Error Teléfono -->
                   <div class="error tel btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
-                    Debe tener entre 8 y 15 dígitos y puede comenzar con un signo +
+                    Por favor, ingrese un número de teléfono válido.<br>
+                    - Debe contener entre 8 y 15 dígitos.<br>
+                    - Puede comenzar con un signo + (opcional).<br>
+                    - Solo se permiten números y el signo +.
                   </div>
                 </div>
                 <div id="inputFecha" class="row">
@@ -127,7 +136,9 @@
                   <!-- Mensaje de Error Fecha del Service -->
                   <div class="mb-3 col-md-12 error fecha btn btn-outline-danger">
                     <i class="bi bi-exclamation-circle"></i>
-                    Debe seleccionar una fecha para el service
+                    Por favor, seleccione una fecha válida para el service.<br>
+                    - La fecha debe ser seleccionada desde el calendario.<br>
+                    - No puede estar en blanco.
                   </div>
                 </div>
                 <div id="inputAnotacion" class="row">
@@ -185,7 +196,9 @@
                     <div class="error service-carrusel btn btn-outline-danger"
                       style="margin:auto; margin-top: 10px;">
                       <i class="bi bi-exclamation-circle"></i>
-                      Debe seleccionar un Service
+                      Por favor, seleccione un servicio.<br>
+                      - Debe elegir una opción del carrusel de servicios.<br>
+                      - Haga clic en "Seleccionar" para confirmar.
                     </div>
                   </div>
                 </div>
@@ -208,27 +221,29 @@
       <div class="col-12 col-md-3" id="redes">
         <div class="row">
           <div class="col-12">
-            <p class="tituloFooter">SIGUENOS</p>
+            <p class="tituloFooter">Síguenos</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
           <div class="col-4 colRedes">
             <a href="https://wa.me/message/J3I3SCIFURNKH1">
               <img class="logoRedes"
-                src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-512.png"
+                src="images/Redes/Whatsapp.png"
                 alt="Whatsapp">
             </a>
           </div>
           <div class="col-4 colRedes">
             <a href="https://www.instagram.com/jmb1kes/">
-              <img class="logoRedes" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png"
-                alt="Whatsapp">
+              <img class="logoRedes" 
+                src="images/Redes/Instagram.png"
+                alt="Instagram">
             </a>
           </div>
           <div class="col-4 colRedes">
             <a href="https://www.facebook.com/profile.php?id=100068867530784&locale=es_LA">
-              <img class="logoRedes" src="https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Facebook-512.png"
-                alt="Whatsapp">
+              <img class="logoRedes" 
+                src="images/Redes/Facebook.png"
+                alt="Facebook">
             </a>
           </div>
         </div>
@@ -237,12 +252,12 @@
         <img src="images/Logo/jmbikes.webp" alt="logo" width="100px" height="auto" id="logoFooter">
       </div>
       <div class="col-12 col-md-3">
-        <p class="copyRight">© JMBIKES 2025</p>
+        <p class="autores">Diseño y Desarrollo a cargo de Garro Germán, Montes Pantano Juan
+          Bautista, Muñoz Bagnis Jerónimo.</p>
       </div>
       <div class="col-12 container text-center; text-align: center; justify-content-center;">
         <hr style="margin: auto; color: white; opacity: 0.9;">
-        <p style="text-align: center; color:white">Diseño y Desarrollo a cargo de Garro German, Montes Pantano Juan
-          Bautista, Muñoz Bagnis Jerónimo.</p>
+        <p class="copyRight">© JMBIKES 2025</p>
       </div>
     </div>
   </footer>

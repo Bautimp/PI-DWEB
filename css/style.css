@@ -402,6 +402,11 @@ body {
 
 /* ESTILO FOOTER */
 
+.tituloFooter {
+    color: rgb(173, 171, 171);
+    font-size: 25px;
+}
+
 #logoFooter {
     align-items: center;
     width: 400px;
@@ -413,23 +418,32 @@ body {
 }
 
 .copyRight {
-    color: rgb(68, 58, 58);
+    color: rgb(173, 171, 171);
     font-size: 25px;
-    font-weight: bold;
     text-align: center;
     margin: auto;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%; 
 }
 
+.autores {
+    color: rgb(173, 171, 171);
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}	
+
 #redes {
-    color: var(--colorNaranja);
     margin-top: 10%;
     margin-bottom: 10%;
-    font-size: 30px;
-    font-weight: bold;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -441,11 +455,11 @@ body {
 }
 
 .colRedes{
-    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    width: auto;
+    height: auto; 
 }
 
 .error-box {
