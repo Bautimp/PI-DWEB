@@ -101,11 +101,27 @@ function validar () {
 
     if (cantErrores == 0) {
         guardarDatosFormulario(nombre, apellido, email, tel, fecha, serviceSeleccionado, adicional);
+
+        mensaje = "Hola! Mi nombre es "+ nombre +" " + apellido + ", me interesa solicitar un turno para un service \"" +
+            serviceSeleccionado + "\" para el dia " + fecha + ". \n" +
+            "Mi correo es " + email +" y esta es la información adicional para el turno: " + adicional;
+        window.open("https://wa.me/5492664257210?text="+ mensaje);
         alert("Formulario enviado correctamente");
         formulario.reset();
         window.location.reload();
 
-        /* Esto mostraria el bloque de success-box, un mensaje que dice formulario enviado
+        /*
+        window.location.replace(...)
+         https://wa.me/<número>?text=<mensaje>;
+        https://wa.me/5492664216858?text=%22Hola%22;
+
+
+
+
+
+
+
+         Esto mostraria el bloque de success-box, un mensaje que dice formulario enviado
         let success = document.querySelector(".success-box");
         mostrarElemento(success);
          */
